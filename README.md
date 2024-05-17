@@ -1,5 +1,7 @@
+<div>
 <img src='https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=black' />
-
+<img src='https://img.shields.io/badge/ChatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white' />
+</div>
 
 ## Menu
 
@@ -20,6 +22,8 @@
 
 ## JS Definition
 
+JavaScript has various definitions that can provide a better understanding of its usage and execution. Here are some of them.
+
 **Javascript** - a high-level, object oriented, multi-paradigm programming language.
 <p>Let's look closely at each part of this definition.</p>
 
@@ -27,6 +31,8 @@
 - object-oriented: based on objects, helps to store and manipulate data;
 - multi-paradigm: means here more flexiable, allows to use different styles of programming;
 - programming language: gives instructions to computer to do different things;
+
+**Javascript** - 
 
 
 ## How to run JS
