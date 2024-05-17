@@ -32,7 +32,19 @@ JavaScript has various definitions that can provide a better understanding of it
 - multi-paradigm: means here more flexiable, allows to use different styles of programming;
 - programming language: gives instructions to computer to do different things;
 
-**Javascript** - 
+**Javascript** - a lightweight, interpreted, object-oriented language with first class functions; a scripting language for web pages. 
+
+- lightweight: easy to implement, has a small memory footprint;
+- interpreted: no compilation instruction, it is executed directly;
+- object-oriented: based on objects, helps to store and manipulate data;
+- first-class: functions can be assigned to variables, returned from other functions, etc., offering more flexibility;
+- scripting language: instructions are written for a runtime environment (e.g., web browsers);
+
+**Javascript** - synchronous, single-threaded programming language.
+
+- synchronous: executes one command at a time;
+- single-threaded: means when one line finishes, it executes the next one.
+
 
 
 ## How to run JS
