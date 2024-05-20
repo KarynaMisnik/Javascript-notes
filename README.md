@@ -10,6 +10,7 @@
 
 * [Intro](#intro)
 * [JS Definition](#js-definition)
+* [Javascript Versions](#javascript-versions)
 * [How to run JS](#how-to-run-js)
 * [Data Types](#data-types)
   - [string](#string)
@@ -56,12 +57,25 @@ JavaScript has various definitions that can provide a better understanding of it
 
 Java was extremely popular at that time, and <a href='https://en.wikipedia.org/wiki/Netscape'>**Netscape**,</a>, the company behind JavaScript, wanted to capitalize on Java's popularity. Despite the name, JavaScript and Java are two distinct languages with different syntax, semantics, and purposes. The inclusion of "Java" in the name was primarily a marketing decision and does not imply a direct relationship between the two languages.
 
-###### JavaScript versions
-
-JS was standardized by ECMA in **1997**. So first standardized version of JavaScript, published as <em>ECMA-262</em>.
-**1998** ECMAScript 2 (ES2): Minor revision to align with ISO/IEC standards.
+## JavaScript versions
 
 
+| Version  | Official Name | Description|
+| :---:   | :---:   | :---   |
+| ES1  | ECMAScript 1 (1997)  |  The first standardized version of JavaScript, published as ECMA-262.  |
+| ES2  | ECMAScript 2 (1998)  | Minor revision to align with ISO/IEC standards.  |
+| ES3  | ECMAScript 3 (1999)  | Added: <ul><li>regular expressions</li><li>try/catch</li><li>switch</li><li>do-while</li></ul>|
+| ES4  |  	ECMAScript 4 | 	Never released  |
+| ES5  | <a href='https://www.w3schools.com/js/js_es5.asp'>ECMAScript 5 (2009)</a>  |  Added: <ul><li> "strict mode"</li><li>JSON support</li><li>String.trim()</li><li>Array.isArray()</li><li>Array iteration methods</li></ul> Allows trailing commas for object literals |
+| ES6  |  	<a href='https://www.w3schools.com/js/js_es6.asp'>ECMAScript 2015</a> | Added: <ul><li>let and const</li><li>default parameter values</li><li>Array.find()</li><li>Array.findIndex()</li><li>classes</li><li>modules</li><li>destructuring</li><li>promises</li></ul>  |
+| -  | <a href='https://www.w3schools.com/js/js_2016.asp'>ECMAScript 2016</a> | Added: <ul><li>exponential operator (**)</li><li>Array.includes() </li></ul>  |
+| -  | <a href='https://www.w3schools.com/js/js_2017.asp'>ECMAScript 2017</a> | Added: <ul><li>string padding</li><li>Object.entries()</li><li>Object.values()</li><li>async functions</li><li>shared memory</li></ul>  Allows trailing commas for function parameters |
+| -  | <a href='https://www.w3schools.com/js/js_2018.asp'>ECMAScript 2018</a> | Added: <ul><li>rest / spread properties</li><li> asynchronous iteration</li><li>Promise.finally()</li><li>more RegExp </li></ul> |
+| -  | <a href='https://www.w3schools.com/js/js_2019.asp'>ECMAScript 2019</a> | Introduced: <ul><li>String.trimStart()</li><li>String.trimEnd()</li><li>Array.flat()</li><li>Object.fromEntries</li><li>Optional catch binding </li></ul>  |
+| -  | <a href='https://www.w3schools.com/js/js_2020.asp'>ECMAScript 2020</a> | Included: <ul><li>BigInt</li><li>dynamic import</li><li>Promise.allSettled()</li><li>globalThis</li><li> nullish coalescing operator (??)</li></ul>  |
+| -  | ECMAScript 2021 |Added: <ul><li>logical assignment operators</li><li>String.prototype.replaceAll()</li><li>weak references</li></ul>|
+| -  | ECMAScript 2022|Introduced: <ul><li>top-level awai</li><li>Array.prototype.at()</li><li>Object.hasOwn()</li></ul>|
+| -  | ECMAScript 2023 |Added: <ul><li>Array.prototype.findLast()</li><li>Array.prototype.findLastIndex()</li><li>Symbol.prototype.description</li></ul>|
 
 ## How to run JS
 
