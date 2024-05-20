@@ -59,6 +59,8 @@ Java was extremely popular at that time, and <a href='https://en.wikipedia.org/w
 
 ## JavaScript versions
 
+ECMAScript is the official name of the language. Since 2016, versions are named by year (ECMAScript 2016, 2017, 2018, 2019, 2020).
+
 
 | Version  | Official Name | Description|
 | :---:   | :---:   | :---   |
