@@ -19,6 +19,7 @@ During my study path, I used several sources of knowledge, including online tuto
 * [JS Definition](#js-definition)
 * [Javascript Versions](#javascript-versions)
 * [How to run JS](#how-to-run-js)
+* [Hoisting](#hoisting)
 * [Data Types](#data-types)
   - [string](#string)
   - [undefined](#undefined)
@@ -27,6 +28,7 @@ During my study path, I used several sources of knowledge, including online tuto
   - [boolean](#boolean)
   - [null](#null)
   - [symbol](#symbol)
+* [Object](#object)
 
 
 ## Intro
@@ -88,8 +90,8 @@ ECMAScript is the official name of the language. Since 2016, versions are named 
 
 ## How to run JS
 
+## Hoisting
+
 ## Data Types
 
-#### String
-
-#### Undefined
+## Object
