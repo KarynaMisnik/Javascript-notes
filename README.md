@@ -29,6 +29,7 @@ During my study path, I used several sources of knowledge, including online tuto
   - [null](#null)
   - [symbol](#symbol)
 * [Object](#object)
+* [Functions](#functions)
 
 
 ## Intro
@@ -95,3 +96,5 @@ ECMAScript is the official name of the language. Since 2016, versions are named 
 ## Data Types
 
 ## Object
+
+## Functions
