@@ -28,7 +28,7 @@ During my study path, I used several sources of knowledge, including online tuto
   - [boolean](#boolean)
   - [null](#null)
   - [symbol](#symbol)
-* [Naming Convention](#naming_convention)
+* [Naming Convention](#naming-convention)
 * [Object](#object)
 * [Functions](#functions)
 
