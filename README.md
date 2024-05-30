@@ -28,7 +28,7 @@ During my study path, I used several sources of knowledge, including online tuto
   - [boolean](#boolean)
   - [null](#null)
   - [symbol](#symbol)
-* [Naming Rules](#naming_rules)
+* [Naming Convention](#naming_convention)
 * [Object](#object)
 * [Functions](#functions)
 
@@ -95,6 +95,8 @@ ECMAScript is the official name of the language. Since 2016, versions are named 
 ## Hoisting
 
 ## Data Types
+
+## Naming Convention 
 
 ## Object
 
