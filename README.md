@@ -28,6 +28,7 @@ During my study path, I used several sources of knowledge, including online tuto
   - [boolean](#boolean)
   - [null](#null)
   - [symbol](#symbol)
+* [Naming Rules](#naming_rules)
 * [Object](#object)
 * [Functions](#functions)
 
