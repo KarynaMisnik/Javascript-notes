@@ -1,8 +1,10 @@
-<div id="user-content-toc">
+<div id="user-content-toc"><ul><summary list-style-type: none;>
 
 ## Javascript Study Notes
 
+</ul></summary>
 </div>
+
 ## Intro
 
 This repository contains my personal notes and code snippets about JavaScript, compiled as I study and explore the language. It covers various aspects of JavaScript, from basic syntax and data structures to more advanced topics like asynchronous programming, object-oriented principles, and modern ES6+ features.
