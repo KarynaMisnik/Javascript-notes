@@ -95,7 +95,22 @@ ECMAScript is the official name of the language. Since 2016, versions are named 
 | -  | ECMAScript 2022|Introduced: <ul><li>top-level awai</li><li>Array.prototype.at()</li><li>Object.hasOwn()</li></ul>|
 | -  | ECMAScript 2023 |Added: <ul><li>Array.prototype.findLast()</li><li>Array.prototype.findLastIndex()</li><li>Symbol.prototype.description</li></ul>|
 
-## How to run JS
+## How to run JavaScript 
+
+Shortly, while code is being executed the whole process is held inside **global execution context** which is divided into two phases: **memory phase** and **code execution phase**. Let's dive deeper in these terms. 
+
+<code>var n = 2;
+function square(num){
+  var ans = num * num;
+  return ans;
+  }
+  var square2 = square(n);
+  var square4 = square(n);
+</code>
+
+**Code execution phase** - it executes after a variable allocation made in memory creation phase. 
+
+
 
 ## Hoisting
 
