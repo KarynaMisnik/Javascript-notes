@@ -105,8 +105,7 @@ function square(num){
   return ans;
   }
   var square2 = square(n);
-  var square4 = square(n);
-</code>
+  var square4 = square(n);</code>
 
 **Code execution phase** - it executes after a variable allocation made in memory creation phase. 
 
