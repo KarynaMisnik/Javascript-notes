@@ -109,7 +109,7 @@ function square(num){
   var square2 = square(n);
   var square4 = square(n);</code>
 
-  In first phase(memory phase) <code>n</code>
+  In first phase (memory phase) <code>n</code>
 is just allocated and <code>n</code> will be undefined, while in the second phase(code execution phase) <code>n</code> will be equal to <code>2</code>
 
 **Code execution phase** - it executes after a variable allocation made in memory creation phase. 
