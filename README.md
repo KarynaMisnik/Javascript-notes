@@ -112,9 +112,12 @@ function square(num){
   In first phase (memory phase) <code>n</code>
 is just allocated and <code>n</code> will be undefined, while in the second phase(code execution phase) <code>n</code> will be equal to <code>2</code>
 
+Code execution phase goes line by line but if it faces a function, it ignores it and goes to the next line because a function is fully allocated in the first phase
+
 **Code execution phase** - it executes after a variable allocation made in memory creation phase. 
 
-
+Code execution phase while running the code and its functions, creates two components: memory and code components. 
+Inside these components there will be also two phases: memory creation phase and code execution phase. 
 
 ## Hoisting
 
