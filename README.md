@@ -37,7 +37,6 @@ During my study path, I used several sources of knowledge, including online tuto
   - [symbol](#symbol)
 * [Naming Convention](#naming-convention)
 * [Object](#object)
-* [Functions](#functions)
 
 
 ## JS Definition
