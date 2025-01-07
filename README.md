@@ -1,6 +1,6 @@
 <div id="user-content-toc"><ul><summary list-style-type: none;>
 
-## Javascript Study Notes📓
+## Javascript Study Notes 📓
 
 </ul></summary>
 </div>
