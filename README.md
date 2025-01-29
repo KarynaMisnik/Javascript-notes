@@ -9,7 +9,7 @@
 
 This repository contains my personal notes and code snippets about JavaScript, compiled as I study and explore the language. It covers various aspects of JavaScript, from basic syntax and data structures to more advanced topics like asynchronous programming, object-oriented principles, and modern ES6+ features.
 
-During my study path, I used several sources of knowledge, including online tutorials, documentation, books, and coding exercises. These notes are a reflection of the information I gathered and the insights I gained from these resources. Such as: 
+During my study path, I used several sources of knowledge, including online tutorials, documentation, books, and coding exercises. These notes are a reflection of the information I gathered and the insights I gained from these resources. Such as:
 
 <div>
 <img src='https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=black' />
@@ -22,12 +22,12 @@ During my study path, I used several sources of knowledge, including online tuto
 
 ## Menu
 
-* [Intro](#intro)
-* [JS Definition](#js-definition)
-* [Javascript Versions](#javascript-versions)
-* [How to run JavaScript](#how-to-run-javascript)
-* [Hoisting](#hoisting)
-* [Data Types](#data-types)
+- [Intro](#intro)
+- [JS Definition](#js-definition)
+- [Javascript Versions](#javascript-versions)
+- [How to run JavaScript](#how-to-run-javascript)
+- [Hoisting](#hoisting)
+- [Data Types](#data-types)
   - [string](#string)
   - [undefined](#undefined)
   - [number](#number)
@@ -35,15 +35,15 @@ During my study path, I used several sources of knowledge, including online tuto
   - [boolean](#boolean)
   - [null](#null)
   - [symbol](#symbol)
-* [Naming Convention](#naming-convention)
-* [Object](#object)
-
+- [Naming Convention](#naming-convention)
+- [Object](#object)
 
 ## JS Definition
 
 JavaScript has various definitions that can provide a better understanding of its usage and execution. Here are some of them.
 
 **Javascript** - a high-level, object oriented, multi-paradigm programming language.
+
 <p>Let's look closely at each part of this definition.</p>
 
 - high-level: we don't really worry about any complex things behind the scenes (eg.: memory management);
@@ -51,7 +51,7 @@ JavaScript has various definitions that can provide a better understanding of it
 - multi-paradigm: means here more flexiable, allows to use different styles of programming;
 - programming language: gives instructions to computer to do different things;
 
-**Javascript** - a lightweight, interpreted, object-oriented language with first class functions; a scripting language for web pages. 
+**Javascript** - a lightweight, interpreted, object-oriented language with first class functions; a scripting language for web pages.
 
 - lightweight: easy to implement, has a small memory footprint;
 - interpreted: no compilation instruction, it is executed directly;
@@ -66,7 +66,7 @@ JavaScript has various definitions that can provide a better understanding of it
 
 > **Names:** <a href='https://en.wikipedia.org/wiki/Brendan_Eich'>Brendan Eich</a> is an American computer programmer and technology executive, created the JavaScript programming language. He is a co-founder of the Mozilla project, the Mozilla Foundation, and the Mozilla Corporation.
 
- **JavaScript** (previously Mocha and LiveScript) - was created roughly in 10 days(in **1995**) as a response to the competitive <a href='https://en.wikipedia.org/wiki/Browser_wars'>"Browser wars"</a>. Its development aimed to enable client-side scripting in web browsers, thus enhancing web functionality and user interaction.
+**JavaScript** (previously Mocha and LiveScript) - was created roughly in 10 days(in **1995**) as a response to the competitive <a href='https://en.wikipedia.org/wiki/Browser_wars'>"Browser wars"</a>. Its development aimed to enable client-side scripting in web browsers, thus enhancing web functionality and user interaction.
 
 ###### Why "Java" in Javascript?
 
@@ -76,53 +76,52 @@ Java was extremely popular at that time, and <a href='https://en.wikipedia.org/w
 
 ECMAScript is the official name of the language. Since 2016, versions are named by year (ECMAScript 2016, 2017, 2018, 2019, 2020).
 
+| Version |                               Official Name                               | Description                                                                                                                                                                                   |
+| :-----: | :-----------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|   ES1   |                            ECMAScript 1 (1997)                            | The first standardized version of JavaScript, published as ECMA-262.                                                                                                                          |
+|   ES2   |                            ECMAScript 2 (1998)                            | Minor revision to align with ISO/IEC standards.                                                                                                                                               |
+|   ES3   |                            ECMAScript 3 (1999)                            | Added: <ul><li>regular expressions</li><li>try/catch</li><li>switch</li><li>do-while</li></ul>                                                                                                |
+|   ES4   |                               ECMAScript 4                                | Never released                                                                                                                                                                                |
+|   ES5   | <a href='https://www.w3schools.com/js/js_es5.asp'>ECMAScript 5 (2009)</a> | Added: <ul><li> "strict mode"</li><li>JSON support</li><li>String.trim()</li><li>Array.isArray()</li><li>Array iteration methods</li></ul> Allows trailing commas for object literals         |
+|   ES6   |   <a href='https://www.w3schools.com/js/js_es6.asp'>ECMAScript 2015</a>   | Added: <ul><li>let and const</li><li>default parameter values</li><li>Array.find()</li><li>Array.findIndex()</li><li>classes</li><li>modules</li><li>destructuring</li><li>promises</li></ul> |
+|    -    |  <a href='https://www.w3schools.com/js/js_2016.asp'>ECMAScript 2016</a>   | Added: <ul><li>exponential operator (\*\*)</li><li>Array.includes() </li></ul>                                                                                                                |
+|    -    |  <a href='https://www.w3schools.com/js/js_2017.asp'>ECMAScript 2017</a>   | Added: <ul><li>string padding</li><li>Object.entries()</li><li>Object.values()</li><li>async functions</li><li>shared memory</li></ul> Allows trailing commas for function parameters         |
+|    -    |  <a href='https://www.w3schools.com/js/js_2018.asp'>ECMAScript 2018</a>   | Added: <ul><li>rest / spread properties</li><li> asynchronous iteration</li><li>Promise.finally()</li><li>more RegExp </li></ul>                                                              |
+|    -    |  <a href='https://www.w3schools.com/js/js_2019.asp'>ECMAScript 2019</a>   | Introduced: <ul><li>String.trimStart()</li><li>String.trimEnd()</li><li>Array.flat()</li><li>Object.fromEntries</li><li>Optional catch binding </li></ul>                                     |
+|    -    |  <a href='https://www.w3schools.com/js/js_2020.asp'>ECMAScript 2020</a>   | Included: <ul><li>BigInt</li><li>dynamic import</li><li>Promise.allSettled()</li><li>globalThis</li><li> nullish coalescing operator (??)</li></ul>                                           |
+|    -    |                              ECMAScript 2021                              | Added: <ul><li>logical assignment operators</li><li>String.prototype.replaceAll()</li><li>weak references</li></ul>                                                                           |
+|    -    |                              ECMAScript 2022                              | Introduced: <ul><li>top-level awai</li><li>Array.prototype.at()</li><li>Object.hasOwn()</li></ul>                                                                                             |
+|    -    |                              ECMAScript 2023                              | Added: <ul><li>Array.prototype.findLast()</li><li>Array.prototype.findLastIndex()</li><li>Symbol.prototype.description</li></ul>                                                              |
 
-| Version  | Official Name | Description|
-| :---:   | :---:   | :---   |
-| ES1  | ECMAScript 1 (1997)  |  The first standardized version of JavaScript, published as ECMA-262.  |
-| ES2  | ECMAScript 2 (1998)  | Minor revision to align with ISO/IEC standards.  |
-| ES3  | ECMAScript 3 (1999)  | Added: <ul><li>regular expressions</li><li>try/catch</li><li>switch</li><li>do-while</li></ul>|
-| ES4  |  	ECMAScript 4 | 	Never released  |
-| ES5  | <a href='https://www.w3schools.com/js/js_es5.asp'>ECMAScript 5 (2009)</a>  |  Added: <ul><li> "strict mode"</li><li>JSON support</li><li>String.trim()</li><li>Array.isArray()</li><li>Array iteration methods</li></ul> Allows trailing commas for object literals |
-| ES6  |  	<a href='https://www.w3schools.com/js/js_es6.asp'>ECMAScript 2015</a> | Added: <ul><li>let and const</li><li>default parameter values</li><li>Array.find()</li><li>Array.findIndex()</li><li>classes</li><li>modules</li><li>destructuring</li><li>promises</li></ul>  |
-| -  | <a href='https://www.w3schools.com/js/js_2016.asp'>ECMAScript 2016</a> | Added: <ul><li>exponential operator (**)</li><li>Array.includes() </li></ul>  |
-| -  | <a href='https://www.w3schools.com/js/js_2017.asp'>ECMAScript 2017</a> | Added: <ul><li>string padding</li><li>Object.entries()</li><li>Object.values()</li><li>async functions</li><li>shared memory</li></ul>  Allows trailing commas for function parameters |
-| -  | <a href='https://www.w3schools.com/js/js_2018.asp'>ECMAScript 2018</a> | Added: <ul><li>rest / spread properties</li><li> asynchronous iteration</li><li>Promise.finally()</li><li>more RegExp </li></ul> |
-| -  | <a href='https://www.w3schools.com/js/js_2019.asp'>ECMAScript 2019</a> | Introduced: <ul><li>String.trimStart()</li><li>String.trimEnd()</li><li>Array.flat()</li><li>Object.fromEntries</li><li>Optional catch binding </li></ul>  |
-| -  | <a href='https://www.w3schools.com/js/js_2020.asp'>ECMAScript 2020</a> | Included: <ul><li>BigInt</li><li>dynamic import</li><li>Promise.allSettled()</li><li>globalThis</li><li> nullish coalescing operator (??)</li></ul>  |
-| -  | ECMAScript 2021 |Added: <ul><li>logical assignment operators</li><li>String.prototype.replaceAll()</li><li>weak references</li></ul>|
-| -  | ECMAScript 2022|Introduced: <ul><li>top-level awai</li><li>Array.prototype.at()</li><li>Object.hasOwn()</li></ul>|
-| -  | ECMAScript 2023 |Added: <ul><li>Array.prototype.findLast()</li><li>Array.prototype.findLastIndex()</li><li>Symbol.prototype.description</li></ul>|
+## How to run JavaScript
 
-## How to run JavaScript 
-
-Shortly, while code is being executed the whole process is held inside **global execution context** which is divided into two phases: **memory phase** and **code execution phase**. Let's dive deeper in these terms. 
+Shortly, while code is being executed the whole process is held inside **global execution context** which is divided into two phases: **memory phase** and **code execution phase**. Let's dive deeper in these terms.
 
 Code example:
 
 <code>var n = 2;
 function square(num){
-  var ans = num * num;
-  return ans;
-  }
-  var square2 = square(n);
-  var square4 = square(n);</code>
+var ans = num \* num;
+return ans;
+}
+var square2 = square(n);
+var square4 = square(n);</code>
 
-  In first phase (memory phase) <code>n</code>
+In first phase (memory phase) <code>n</code>
 is just allocated and <code>n</code> will be undefined, while in the second phase(code execution phase) <code>n</code> will be equal to <code>2</code>
 
 Code execution phase goes line by line but if it faces a function, it ignores it and goes to the next line because a function is fully allocated in the first phase
 
-**Code execution phase** - it executes after a variable allocation made in memory creation phase. 
+**Code execution phase** - it executes after a variable allocation made in memory creation phase.
 
-Code execution phase while running the code and its functions, creates two components: memory and code components. 
-Inside these components there will be also two phases: memory creation phase and code execution phase. 
+Code execution phase while running the code and its functions, creates two components: memory and code components.
+Inside these components there will be also two phases: memory creation phase and code execution phase.
 
 ## Hoisting
 
 ## Data Types
 
-## Naming Convention 
+## Naming Convention
 
 ## Object
 
