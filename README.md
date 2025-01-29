@@ -23,11 +23,12 @@ During my study path, I used several sources of knowledge, including online tuto
 ## Menu
 
 - [Intro](#intro)
-- [JS Definition](#js-definition)
-- [Javascript Versions](#javascript-versions)
-- [How to run JavaScript](#how-to-run-javascript)
-- [Hoisting](#hoisting)
-- [Data Types](#data-types)
+
+* [JS Definition](#js-definition)
+* [Javascript Versions](#javascript-versions)
+* [How to run JavaScript](#how-to-run-javascript)
+* [Hoisting](#hoisting)
+* [Data Types](#data-types)
   - [string](#string)
   - [undefined](#undefined)
   - [number](#number)
@@ -35,8 +36,14 @@ During my study path, I used several sources of knowledge, including online tuto
   - [boolean](#boolean)
   - [null](#null)
   - [symbol](#symbol)
-- [Naming Convention](#naming-convention)
-- [Object](#object)
+* [Naming Convention](#naming-convention)
+* [Object](#object)
+* [Basics of JavaScript, Practical Examples](#basics-of-javascript-practical-examples)
+
+- [Hello World](#hello-world)
+- [Alert-dialog](#alert-dialog)
+- [Using Date(), Math()](#using-date-math)
+- [Manipulating DOM](#manipulating-dom)
 
 ## JS Definition
 
@@ -126,3 +133,39 @@ Inside these components there will be also two phases: memory creation phase and
 ## Object
 
 ## Functions
+
+## Basics of JavaScript, Practical Examples
+
+#### 'Hello World'
+
+To print a simple first JavaScript program in the console and understand how HTML and JavaScript work together, we start by creating an HTML file. First, we need to link the HTML file to a JavaScript file. This is done by adding a **<script>** tag inside the **<body>** of the HTML file.
+
+Next, open a JavaScript file and write:
+
+<code>console.log("Hello, World!");</code>
+
+An HTML file with the **.html** extension can be easily opened by clicking on it. The page will appear blank because our script only logs output to the console. To see the result, open the browser’s developer tools by pressing F12 and navigate to the Console tab.
+
+#### Alert-dialog
+
+To display the same result in a popup window, similar to an alert dialog, use the <code>alert()</code> function in your JavaScript file:
+
+<code>alert("Hello World");</code>
+
+This will show the phrase as a browser notification-style popup.
+
+#### Using Date(), Math()
+
+**Date** is a <ins>constructor</ins> function in JavaScript. You can use <code>new Date()</code> to create a new date object. It is useful for operating with time.
+
+<code>console.log(Date()); // Outputs the current date as a string, not an object</code>
+
+> Note: Calling **Date()** without new returns the current date and time as a string instead of an object.
+
+**Math** is a built-in <insa>object</insa> in JavaScript. It provides mathematical constants and functions, such as **Math.PI**, **Math.sqrt()**, and **Math.random()**.
+
+<code>console.log(Math.random()); // Outputs a random number between 0 and 1</code>
+
+> Note: Unlike many other objects, Math is not a ~~constructor~~, meaning you can't create instances of it using <code>new Math()</code>.
+
+#### Manipulating DOM

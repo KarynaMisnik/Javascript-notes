@@ -1,1 +1,17 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
 
+button,
+input[type="button"] {
+  padding: 15px;
+  background-color: #b8d4f5;
+  color: black;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 2px solid rgb(21, 104, 199);
+}
