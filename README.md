@@ -20,6 +20,8 @@ During my study path, I used several sources of knowledge, including online tuto
 <img src='https://img.shields.io/static/v1?style=for-the-badge&message=YouTube&color=FF0000&logo=YouTube&logoColor=FFFFFF&label=' />
 </div>
 
+<h4>To see 👀 Practical Examples go to: <a href="https://karynamisnik.github.io/Javascript-notes/index.html">here</a></h4>
+
 ## Menu
 
 - [Intro](#intro)
