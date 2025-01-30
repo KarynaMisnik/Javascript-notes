@@ -172,23 +172,21 @@ This will show the phrase as a browser notification-style popup.
 
 First, what is DOM? The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.
 
-<p align="right">
-  [Link to External Website](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
-</p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">More...</a>
 
 To manipulate the DOM (Document Object Model) using JavaScript, follow these steps:
 
-1. Create an <h1> Element in HTML
+<ins>1. Create an **<h1>** Element in HTML</ins>
 
-1First, create an <h1> tag with some text between the tags and assign it a unique id:
+First, create an **<h1>** tag with some text between the tags and assign it a unique id:
 
 <code><h1 id="text">Milky Way 🌌</h1></code>
 
 > Note: HTML file
 
-2. Access the <h1> Element in JavaScript
+<ins>2. Access the **<h1>** Element in JavaScript</ins>
 
-In your JavaScript file, declare a variable and assign it to the content of the <h1> tag by referencing its id:
+In your JavaScript file, declare a variable and assign it to the content of the **<h1>** tag by referencing its id:
 
 <code>let printingText = document.getElementById("text").innerHTML;
 console.log(printingText);
@@ -196,15 +194,15 @@ console.log(printingText);
 
 > Note: JS file
 
-3. Manipulate the Content of a Button
+<ins>3. Manipulate the Content of a Button</ins>
 
-Similarly, you can manipulate the content of a button by using the <input> tag with type="button".
+Similarly, you can manipulate the content of a button by using the **<input>** tag with **type="button"**.
 
 <code><input type="button" id="btn-one"></code>
 
 > Note: html file
 
-4. Assign Text to the Button
+<ins>4. Assign Text to the Button</ins>
 
 In your JavaScript file, you can set the button's text using its id. You don't need to add content directly in the HTML, as you can set the button's text through JavaScript:
 
