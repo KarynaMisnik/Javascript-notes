@@ -17,4 +17,3 @@ let printingText = document.getElementById("text").innerHTML;
 document.getElementById("btn-one").value = "Click me";
 
 console.log(printingText);
-console.log(btn_text);

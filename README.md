@@ -169,3 +169,45 @@ This will show the phrase as a browser notification-style popup.
 > Note: Unlike many other objects, Math is not a ~~constructor~~, meaning you can't create instances of it using <code>new Math()</code>.
 
 #### Manipulating DOM
+
+First, what is DOM? The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.
+
+<p align="right">
+  [Link to External Website](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
+</p>
+
+To manipulate the DOM (Document Object Model) using JavaScript, follow these steps:
+
+1. Create an <h1> Element in HTML
+
+1First, create an <h1> tag with some text between the tags and assign it a unique id:
+
+<code><h1 id="text">Milky Way 🌌</h1></code>
+
+> Note: HTML file
+
+2. Access the <h1> Element in JavaScript
+
+In your JavaScript file, declare a variable and assign it to the content of the <h1> tag by referencing its id:
+
+<code>let printingText = document.getElementById("text").innerHTML;
+console.log(printingText);
+</code>
+
+> Note: JS file
+
+3. Manipulate the Content of a Button
+
+Similarly, you can manipulate the content of a button by using the <input> tag with type="button".
+
+<code><input type="button" id="btn-one"></code>
+
+> Note: html file
+
+4. Assign Text to the Button
+
+In your JavaScript file, you can set the button's text using its id. You don't need to add content directly in the HTML, as you can set the button's text through JavaScript:
+
+<code>document.getElementById("your_id_for_input").value = "Click me";</code>
+
+> Note: JS file
