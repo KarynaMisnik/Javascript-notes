@@ -180,7 +180,7 @@ To manipulate the DOM (Document Object Model) using JavaScript, follow these ste
 
 First, create an **<h1>** tag with some text between the tags and assign it a unique id:
 
-<code><h1 id="text">Milky Way 🌌</h1></code>
+<code>&lt; h1 &gt; id="text">Milky Way 🌌 &lt; /h1 &gt;</code>
 
 > Note: HTML file
 
