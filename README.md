@@ -176,17 +176,17 @@ First, what is DOM? The Document Object Model (DOM) is a programming interface f
 
 To manipulate the DOM (Document Object Model) using JavaScript, follow these steps:
 
-<ins>1. Create an **<h1>** Element in HTML</ins>
+<ins>1. Create an &lt;h1&gt; Element in HTML</ins>
 
-First, create an **<h1>** tag with some text between the tags and assign it a unique id:
+First, create an &lt;h1&gt; tag with some text between the tags and assign it a unique id:
 
-<code>&lt; h1 &gt; id="text">Milky Way 🌌 &lt; /h1 &gt;</code>
+<code>&lt;h1&gt; id="text">Milky Way 🌌 &lt;h1&gt;</code>
 
 > Note: HTML file
 
-<ins>2. Access the **<h1>** Element in JavaScript</ins>
+<ins>2. Access the \*&lt;h1&gt; Element in JavaScript</ins>
 
-In your JavaScript file, declare a variable and assign it to the content of the **<h1>** tag by referencing its id:
+In your JavaScript file, declare a variable and assign it to the content of the &lt;h1&gt; tag by referencing its id:
 
 <code>let printingText = document.getElementById("text").innerHTML;
 console.log(printingText);
@@ -196,9 +196,9 @@ console.log(printingText);
 
 <ins>3. Manipulate the Content of a Button</ins>
 
-Similarly, you can manipulate the content of a button by using the **<input>** tag with **type="button"**.
+Similarly, you can manipulate the content of a button by using the &lt;input&gt; tag with **type="button"**.
 
-<code><input type="button" id="btn-one"></code>
+<code>&lt;input type="button" id="btn-one" &gt;</code>
 
 > Note: html file
 
