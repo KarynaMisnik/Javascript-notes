@@ -4,20 +4,24 @@
   box-sizing: border-box;
 }
 
-div {
+body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background-color: #d1d0d0;
+}
+
+h1 {
+  margin-bottom: 10px;
+  color: rgb(152, 6, 219);
 }
 
 a {
   text-decoration: none;
   font-size: 20px;
   color: black;
-  padding: 5px;
-  background-color: #b9b9b9;
 }
 
 a:hover {
@@ -26,14 +30,4 @@ a:hover {
 
 ul li {
   list-style: none;
-}
-
-button,
-input[type="button"] {
-  padding: 15px;
-  background-color: #b8d4f5;
-  color: black;
-  font-size: 20px;
-  border-radius: 5px;
-  border: 2px solid rgb(21, 104, 199);
 }

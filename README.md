@@ -44,6 +44,7 @@ During my study path, I used several sources of knowledge, including online tuto
 - [Alert-dialog](#alert-dialog)
 - [Using Date(), Math()](#using-date-math)
 - [Manipulating DOM](#manipulating-dom)
+- [Variables](#variables)
 
 ## JS Definition
 
@@ -209,3 +210,16 @@ In your JavaScript file, you can set the button's text using its id. You don't n
 <code>document.getElementById("your_id_for_input").value = "Click me";</code>
 
 > Note: JS file
+
+#### Variables
+
+Before working with variables, there are important things to remember.
+
+Always declare variables using **let** or **const**. The **var** keyword is mostly used for supporting old code and is generally <ins>avoided</ins> today. To understand why var is no longer recommended, check out hoisting.
+[Hoisting](#hoisting)
+
+> Reminder: Variables declared with **let** can be <ins>reassigned</ins>, while **const** cannot (it remains constant).
+
+Always assign a value when declaring a variable; otherwise, it will be **undefined**.
+
+Use meaningful variable names. Variable names should be short but informative, giving a clear hint about their purpose. Following the JavaScript Naming Conventions[Naming Convention](#naming-convention) is essential. Otherwise, the program might not recognize the variable, leading to errors or unexpected behavior.

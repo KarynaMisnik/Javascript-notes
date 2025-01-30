@@ -4,7 +4,7 @@ console.log("Hello World!");
 
 /* 'HELLO WORLD' IN ALERT DIALOG */
 
-alert("Hello World!");
+//alert("Hello World!");
 
 /* HOW TO USE DATE() CONSTRUCTOR, MATH() OBJECT */
 
