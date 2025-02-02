@@ -63,9 +63,19 @@ console.log(num_three + " / " + num_one + " / " + num_two + " = " + result);
 result = num_three / num_one;
 console.log(num_two + " % " + num_one + " = " + result);
 
-/*
-Add variables a, b, c with values 5, 10 and 15. 
+/* Arithmetical operators in JS work similarly to opertors in math. "+" adds numeric values to each other, 
+with "-" we substract one numeric value from another, "*" is used for multiplacation and "/" for division. 
+In comparison  to, for example C programming, JS doesn't care about type of variable. 
+If you need to divide digits knowing that the result will not be round, JS will take care of it and return 
+float even if your numeric values were whole numbers. 
 
+Modulus ....
 
-Use different arithmetic operators and print results into console
 */
+
+/* USING MATH OBJECT Math.PI */
+
+let diameter = 3;
+let radius = diameter / 2;
+let area = Math.PI * radius ** 2;
+console.log("The area of a circle with diameter " + diameter + " is: " + area);
