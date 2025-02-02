@@ -79,3 +79,15 @@ let diameter = 3;
 let radius = diameter / 2;
 let area = Math.PI * radius ** 2;
 console.log("The area of a circle with diameter " + diameter + " is: " + area);
+
+/* MORE EXAMPLES: CONVERTING TEMPERATURE USING FORMULA */
+
+let celsiusTemperature = 25;
+let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+console.log(
+  "Temperature: " +
+    celsiusTemperature +
+    " °C is " +
+    fahrenheitTemperature +
+    " °F."
+);
