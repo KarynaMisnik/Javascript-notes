@@ -235,7 +235,7 @@ To display a variable in the console, use <code>console.log(variableName)</code>
 
 If we assign a **numeric** value to a variable, quotes are not ~~needed~~.
 
-A **Boolean** variable has only two values: **true** or **false**. Boolean values should <ins>not</ins> be enclosed in quotes.
+A **Boolean** variable has only two values: **true** or **false**. Boolean values should <ins>not be enclosed</ins> in quotes.
 They are mostly used with logical operators in if statements to check conditions.<br>
 
 <code>let firstName = "Sponge Bob";
