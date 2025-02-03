@@ -44,16 +44,6 @@ console.log(num_one + " * " + num_two + " * " + num_three + " = " + result);
 result = num_three / num_one / num_two;
 console.log(num_three + " / " + num_one + " / " + num_two + " = " + result);
 
-/* Arithmetical operators in JS work similarly to opertors in math. "+" adds numeric values to each other, 
-with "-" we substract one numeric value from another, "*" is used for multiplacation and "/" for division. 
-In comparison  to, for example C programming, JS doesn't care about type of variable. 
-If you need to divide digits knowing that the result will not be round, JS will take care of it and return 
-float even if your numeric values were whole numbers. 
-
-Modulus ....
-
-*/
-
 // USING MODULUS (REMINDER OF DIVISION) AND  MATH OBJECT Math.round
 
 let studentsScore = 6;
