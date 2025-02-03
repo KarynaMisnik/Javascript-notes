@@ -225,3 +225,30 @@ Always declare variables using **let** or **const**. The **var** keyword is most
 Always assign a value when declaring a variable; otherwise, it will be **undefined**.
 
 Use meaningful variable names. Variable names should be short but informative, giving a clear hint about their purpose. Following the JavaScript Naming Conventions[Naming Convention](#naming-convention) is essential. Otherwise, the program might not recognize the variable, leading to errors or unexpected behavior.
+
+To create a variable with a string value, first declare a variable.
+
+For now, we will use let to do so. To assign a value to a variable, use the equals sign **=**.
+A string must be enclosed in double (") or single (') quotes.
+
+To display a variable in the console, use <code>console.log(variableName)</code>.
+
+If we assign a **numeric** value to a variable, quotes are not ~~needed~~.
+
+A **Boolean** variable has only two values: **true** or **false**. Boolean values should <ins>not</ins> be enclosed in quotes.
+They are mostly used with logical operators in if statements to check conditions.<br>
+
+<code>let firstName = "Sponge Bob";
+console.log(firstName);
+let lastName = "Squarepants";
+console.log(lastName);
+let age = 38;
+console.log(age);
+let year = 2025;
+console.log(year);
+let isStudent = true;
+console.log(isStudent);
+console.log(
+`My name is ${firstName} ${lastName} and I am ${age} years old. At the moment I'm a student: ${isStudent}`
+);
+</code>

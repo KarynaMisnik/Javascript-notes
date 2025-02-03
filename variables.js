@@ -21,21 +21,6 @@ console.log(
   `My name is ${firstName} ${lastName} and I am ${age} years old. At the moment I'm a student: ${isStudent}`
 );
 
-/*
-CHECK THE TEXT
-
-To create a variable with string value, first declare a variable.  
-For now we will use let to do so. To assign a variable to a value the equation sign is used. 
-String must be in double or single quatoes. 
-console.log with a variable name in parentheses will display the variable in the console. 
-
-If we assign a numeric value to a variable we don't need parentheses. 
-
-Boolean varaiables have only two values: true and false, and they must not be in parentheses. 
-Boolean values are used mostly with logical operators in if-statements to check if a variable is true or false. 
-
-*/
-
 /* USING ARITHMETIC OPERATORS */
 
 let num_one = 5;
