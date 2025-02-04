@@ -159,13 +159,13 @@ This will show the phrase as a browser notification-style popup.
 
 #### Using Date(), Math()
 
-**Date** is a <ins>constructor</ins> function in JavaScript. You can use <code>new Date()</code> to create a new date object. It is useful for operating with time.
+**Date()** is a <ins>constructor</ins> function in JavaScript. You can use <code>new Date()</code> to create a new date object. It is useful for operating with time.
 
 <code>console.log(Date()); // Outputs the current date as a string, not an object</code>
 
 > Note: Calling **Date()** without new returns the current date and time as a string instead of an object.
 
-**Math** is a built-in <insa>object</insa> in JavaScript. It provides mathematical constants and functions, such as **Math.PI**, **Math.sqrt()**, and **Math.random()**.
+**Math()** is a built-in <insa>object</insa> in JavaScript. It provides mathematical constants and functions, such as **Math.PI**, **Math.sqrt()**, and **Math.random()**.
 
 <code>console.log(Math.random()); // Outputs a random number between 0 and 1</code>
 
