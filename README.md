@@ -175,7 +175,7 @@ This will show the phrase as a browser notification-style popup.
 
 First, what is DOM? The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.
 
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">More...</a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">[More...]</a>
 
 To manipulate the DOM (Document Object Model) using JavaScript, follow these steps:
 
@@ -253,7 +253,7 @@ console.log(
 );
 </code>
 
-**Modulus**
+**Modulus %**
 
 The modulus operator **%** in JavaScript returns the <ins>remainder</ins> of a division. It’s useful for checking even/odd numbers, looping patterns, and cyclic behaviors. If the remainder is <code>0</code>, the dividend is perfectly divisible by the divisor.<br>
 
