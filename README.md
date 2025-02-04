@@ -107,7 +107,7 @@ ECMAScript is the official name of the language. Since 2016, versions are named 
 
 Shortly, while code is being executed the whole process is held inside **global execution context** which is divided into two phases: **memory phase** and **code execution phase**. Let's dive deeper in these terms.
 
-Code example:
+Code example:<br>
 
 <code>var n = 2;
 function square(num){
@@ -248,9 +248,8 @@ let year = 2025;
 console.log(year);
 let isStudent = true;
 console.log(isStudent);
-console.log(
-`My name is ${firstName} ${lastName} and I am ${age} years old. At the moment I'm a student: ${isStudent}`
-);
+console.log(`My name is ${firstName} ${lastName} and 
+I am ${age} years old. At the moment I'm a student: ${isStudent}`);
 </code>
 
 **Modulus %**
