@@ -35,3 +35,8 @@ let fruits_three = ["apple", "banana", "orange"];
 let firstFruit = fruits_three.shift();
 console.log(firstFruit); // 'apple'
 console.log(fruits_three); // ['banana', 'orange']
+
+/* array method: unshift() */
+let fruits_four = ["banana", "orange"];
+fruits_four.unshift("apple");
+console.log(fruits_four); // ['apple', 'banana', 'orange']
