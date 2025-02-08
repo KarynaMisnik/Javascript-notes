@@ -19,9 +19,13 @@ console.log("Third value from the array: " + planets[2]);
 
 /* DIFFERENT ARRAY METHODS */
 
-/*Adds one or more elements 
-to the end of an array and returns t
-he new length of the array.  */
+/* array method: push()  */
 let fruits = ["apple", "banana"];
 fruits.push("orange");
 console.log(fruits);
+
+/* array method: pop() */
+let fruits_two = ["apple", "banana", "orange"];
+let lastFruit = fruits_two.pop();
+console.log(lastFruit); // 'orange'
+console.log(fruits_two); // ['apple', 'banana']
