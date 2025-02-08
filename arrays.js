@@ -40,3 +40,8 @@ console.log(fruits_three); // ['banana', 'orange']
 let fruits_four = ["banana", "orange"];
 fruits_four.unshift("apple");
 console.log(fruits_four); // ['apple', 'banana', 'orange']
+
+/* array method: splice() */
+let fruits_five = ["apple", "banana", "orange"];
+fruits_five.splice(1, 0, "grape", "kiwi");
+console.log(fruits_five); // ['apple', 'grape', 'kiwi', 'banana', 'orange']
