@@ -29,3 +29,9 @@ let fruits_two = ["apple", "banana", "orange"];
 let lastFruit = fruits_two.pop();
 console.log(lastFruit); // 'orange'
 console.log(fruits_two); // ['apple', 'banana']
+
+/* array method: shift() */
+let fruits_three = ["apple", "banana", "orange"];
+let firstFruit = fruits_three.shift();
+console.log(firstFruit); // 'apple'
+console.log(fruits_three); // ['banana', 'orange']
