@@ -77,3 +77,10 @@ let doubledNumbers = numbers.map(function (number) {
   return number * 2;
 });
 console.log(doubledNumbers); // [2, 4, 6]
+
+/* array method: filter() */
+let numbers_two = [1, 2, 3, 4, 5];
+let evenNumbers = numbers_two.filter(function (number) {
+  return number % 2 === 0;
+});
+console.log(evenNumbers); // [2, 4]
