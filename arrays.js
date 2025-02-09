@@ -70,3 +70,10 @@ let fruits_ten = ["apple", "banana", "orange"];
 fruits_ten.forEach(function (fruit) {
   console.log(fruit);
 });
+
+/* array method: map() */
+let numbers = [1, 2, 3];
+let doubledNumbers = numbers.map(function (number) {
+  return number * 2;
+});
+console.log(doubledNumbers); // [2, 4, 6]
