@@ -45,3 +45,8 @@ console.log(fruits_four); // ['apple', 'banana', 'orange']
 let fruits_five = ["apple", "banana", "orange"];
 fruits_five.splice(1, 0, "grape", "kiwi");
 console.log(fruits_five); // ['apple', 'grape', 'kiwi', 'banana', 'orange']
+
+/* array method: slice() */
+let fruits_six = ["apple", "banana", "orange"];
+let citrus = fruits_six.slice(1);
+console.log(citrus); // ['banana', 'orange']
