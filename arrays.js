@@ -56,3 +56,7 @@ let fruits_seven = ["apple", "banana"];
 let vegetables = ["carrot", "potato"];
 let fruitsAndVegetables = fruits_seven.concat(vegetables);
 console.log(fruitsAndVegetables); // ['apple', 'banana', 'carrot', 'potato']
+
+/* array method: indexOf() */
+let fruits_eight = ["apple", "banana", "orange"];
+console.log(fruits_eight.indexOf("banana")); // 1
