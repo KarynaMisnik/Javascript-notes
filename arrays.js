@@ -64,3 +64,9 @@ console.log(fruits_eight.indexOf("banana")); // 1
 /* array method: lastIndexOf() */
 let fruits_nine = ["apple", "banana", "pear", "orange"];
 console.log(fruits_nine.lastIndexOf("banana")); // 2
+
+/* array method: forEach() */
+let fruits_ten = ["apple", "banana", "orange"];
+fruits_ten.forEach(function (fruit) {
+  console.log(fruit);
+});
