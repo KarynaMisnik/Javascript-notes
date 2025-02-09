@@ -60,3 +60,7 @@ console.log(fruitsAndVegetables); // ['apple', 'banana', 'carrot', 'potato']
 /* array method: indexOf() */
 let fruits_eight = ["apple", "banana", "orange"];
 console.log(fruits_eight.indexOf("banana")); // 1
+
+/* array method: lastIndexOf() */
+let fruits_nine = ["apple", "banana", "pear", "orange"];
+console.log(fruits_nine.lastIndexOf("banana")); // 2
