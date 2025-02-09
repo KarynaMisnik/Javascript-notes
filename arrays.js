@@ -50,3 +50,9 @@ console.log(fruits_five); // ['apple', 'grape', 'kiwi', 'banana', 'orange']
 let fruits_six = ["apple", "banana", "orange"];
 let citrus = fruits_six.slice(1);
 console.log(citrus); // ['banana', 'orange']
+
+/* array method: concat() */
+let fruits_seven = ["apple", "banana"];
+let vegetables = ["carrot", "potato"];
+let fruitsAndVegetables = fruits_seven.concat(vegetables);
+console.log(fruitsAndVegetables); // ['apple', 'banana', 'carrot', 'potato']
