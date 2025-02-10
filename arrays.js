@@ -42,6 +42,8 @@ let firstFruit = fruits_three.shift();
 console.log(firstFruit); // 'apple'
 console.log(fruits_three); // ['banana', 'orange']
 
+/* Adds one or more elements to the beginning 
+of an array and returns the new length of the array. */
 /* array method: unshift() */
 let fruits_four = ["banana", "orange"];
 fruits_four.unshift("apple");
