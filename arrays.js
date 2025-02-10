@@ -19,17 +19,23 @@ console.log("Third value from the array: " + planets[2]);
 
 /* DIFFERENT ARRAY METHODS */
 
+/* Adds one or more elements to the end of an array 
+and returns the new length of the array. */
 /* array method: push()  */
 let fruits = ["apple", "banana"];
+console.log("Before push", fruits);
 fruits.push("orange");
-console.log(fruits);
+console.log("After push", fruits);
 
+/* Removes the last element from an array and returns that element. */
 /* array method: pop() */
 let fruits_two = ["apple", "banana", "orange"];
 let lastFruit = fruits_two.pop();
-console.log(lastFruit); // 'orange'
-console.log(fruits_two); // ['apple', 'banana']
+console.log("Original array: ", fruits_two);
+console.log("Pop() method, removes last element: ", lastFruit); // 'orange'
+console.log("Array after pop(): ", fruits_two); // ['apple', 'banana']
 
+/* Removes the first element from an array and returns that element. */
 /* array method: shift() */
 let fruits_three = ["apple", "banana", "orange"];
 let firstFruit = fruits_three.shift();
