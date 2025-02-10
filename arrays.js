@@ -49,6 +49,8 @@ let fruits_four = ["banana", "orange"];
 fruits_four.unshift("apple");
 console.log(fruits_four); // ['apple', 'banana', 'orange']
 
+/* change the contents of an array by removing or 
+replacing existing elements and/or adding new elements in place. *
 /* array method: splice() */
 let fruits_five = ["apple", "banana", "orange"];
 fruits_five.splice(1, 0, "grape", "kiwi");
