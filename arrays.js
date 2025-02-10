@@ -63,6 +63,8 @@ let fruits_six = ["apple", "banana", "orange"];
 let citrus = fruits_six.slice(1);
 console.log(citrus); // ['banana', 'orange']
 
+/* Merges two or more arrays. This method does not change 
+the existing arrays but instead returns a new array. */
 /* array method: concat() */
 let fruits_seven = ["apple", "banana"];
 let vegetables = ["carrot", "potato"];
