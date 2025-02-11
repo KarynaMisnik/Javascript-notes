@@ -26,3 +26,16 @@ console.log(
     "by " +
     order.customer
 );
+
+/* OBJECT CLASS */
+
+class Product {
+  constructor(id, description, quantity, price) {
+    this.id = id;
+    this.description = description;
+    this.quantity = quantity;
+    this.price = price;
+  }
+}
+
+let product1 = new Product(3, "Pasta", 2, 15.0);
