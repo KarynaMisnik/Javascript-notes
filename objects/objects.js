@@ -39,3 +39,17 @@ class Product {
 }
 
 let product1 = new Product(3, "Pasta", 2, 15.0);
+
+console.log(
+  "Product ID: " +
+    product1.id +
+    "\n" +
+    "Product Description: " +
+    product1.description +
+    "\n" +
+    "Product Quantity: " +
+    product1.quantity +
+    "\n" +
+    "Product Price: $" +
+    product1.price
+);
