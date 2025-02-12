@@ -53,3 +53,47 @@ console.log(
     "Product Price: $" +
     product1.price
 );
+
+/* MORE OBJECTS */
+
+const books = [];
+
+class Book {
+  constructor(author, title, year, pages, type) {
+    this.author = author;
+    this.title = title;
+    this.year = year;
+    this.pages = pages;
+    this.type = type;
+  }
+}
+
+function addBook() {
+  let author = document.getElementById("author").value;
+  let title = document.getElementById("title").value;
+  let year = document.getElementById("year").value;
+  let pages = document.getElementById("pages").value;
+  let type = document.getElementById("type").value;
+
+  const book = new Book(author, title, year, pages, type);
+  books.push(book);
+  showBooks();
+}
+
+function showBooks() {
+  const tableBody = document.getElementById("books");
+  tableBody.innerHTML = "";
+
+  books.forEach((book, index) => {
+    const row = document.createElement("tr");
+    row.innerHTML = `
+                    <td>${index + 1}</td>
+                    <td>${book.author}</td>
+                    <td>${book.title}</td>
+                    <td>${book.year}</td>
+                    <td>${book.pages}</td>
+                    <td>${book.type}</td>
+                `;
+    tableBody.appendChild(row);
+  });
+}

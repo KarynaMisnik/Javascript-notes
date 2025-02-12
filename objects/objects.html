@@ -16,8 +16,38 @@
     <nav><a href="../index.html">To Menu</a></nav>
 
     <div>
+        <div><h1>Press <span>F12</span> to open console to see the result</h1>
+</div>
 
-        <h1>Press <span>F12</span> to open console to see the result</h1>
+<div><h3>Books List</h3>
+
+    <input type="text" id="author" placeholder="Author">
+    <input type="text" id="title" placeholder="Title">
+    <input type="number" id="year" placeholder="Year">
+    <input type="number" id="pages" placeholder="Pages">
+    <input type="text" id="type" placeholder="Type">
+    <button onclick="addBook()">Add Book</button>
+
+    <table style="border: 1px solid black;">
+        <tr>
+            <th>#</th>
+            <th >Author</th>
+            <th>Title</th>
+            <th>Year</th>
+            <th>Pages</th>
+            <th>Type</th>
+        </tr>
+        <tbody id="books">
+            
+        </tbody>
+    </table>
+
+
+</div>
+
+
+
+       
 
     </div>
 
