@@ -21,7 +21,7 @@ a {
 }
 
 a:hover {
-  color: rgb(152, 6, 219);
+  color: #9806db;
 }
 
 ul li {
@@ -31,7 +31,7 @@ ul li {
 button,
 input[type="button"],
 input {
-  padding: 15px;
+  padding: 10px;
   background-color: #cbe0f8;
   color: black;
   font-size: 20px;
