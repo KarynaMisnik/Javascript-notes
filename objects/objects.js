@@ -97,3 +97,47 @@ function showBooks() {
     tableBody.appendChild(row);
   });
 }
+
+/* MORE OBJECTS */
+
+const bankAccount = {
+  saldo: 0,
+  saveMoney: function (sum) {
+    this.saldo += sum;
+    return this.saldo;
+  },
+  getMoney: function (amount) {
+    if (this.saldo >= amount) {
+      this.saldo -= amount;
+      return this.saldo;
+    } else {
+      return -1;
+    }
+  },
+};
+
+function saveMoney() {
+  const amount = parseFloat(document.getElementById("amount").value);
+  if (amount > 0) {
+    const newBalance = bankAccount.saveMoney(amount);
+    document.getElementById("balance").textContent = newBalance;
+    document.getElementById("message").textContent = "Saved $" + amount;
+  } else {
+    document.getElementById("message").textContent = "Enter a valid amount";
+  }
+}
+
+function getMoney() {
+  const amount = parseFloat(document.getElementById("amount").value);
+  if (amount > 0) {
+    const newBalance = bankAccount.getMoney(amount);
+    if (newBalance !== -1) {
+      document.getElementById("balance").textContent = newBalance;
+      document.getElementById("message").textContent = "Withdrew $" + amount;
+    } else {
+      document.getElementById("message").textContent = "Not enough money";
+    }
+  } else {
+    document.getElementById("message").textContent = "Enter a valid amount";
+  }
+}
