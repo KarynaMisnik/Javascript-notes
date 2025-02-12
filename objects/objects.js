@@ -115,8 +115,12 @@ const bankAccount = {
     }
   },
 };
-
+/* allowing a user to save money into a bank 
+account and update the displayed balance and message */
 function saveMoney() {
+  /* This line retrieves the value from an HTML input element with the ID amount. 
+  It uses parseFloat to convert the input value 
+  from a string to a floating-point number, which is stored in the variable amount*/
   const amount = parseFloat(document.getElementById("amount").value);
   if (amount > 0) {
     const newBalance = bankAccount.saveMoney(amount);
