@@ -261,7 +261,7 @@ let maxScore = 19;
 let scoreResult = studentsScore % maxScore;
 console.log(studentsScore + " % " + maxScore + " = " + Math.round(scoreResult));</code>
 
-**Arithmetic operators**
+**➗ Arithmetic operators**
 
 Arithmetic operators in JavaScript work similarly to those in mathematics.
 
