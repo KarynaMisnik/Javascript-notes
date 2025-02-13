@@ -149,7 +149,7 @@ Next, open a JavaScript file and write:
 
 An HTML file with the **.html** extension can be easily opened by clicking on it. The page will appear blank because our script only logs output to the console. To see the result, open the browser’s developer tools by pressing F12 and navigate to the Console tab.
 
-#### Alert-dialog
+#### ⚠️ Alert-dialog
 
 To display the same result in a popup window, similar to an alert dialog, use the <code>alert()</code> function in your JavaScript file:
 
