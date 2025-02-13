@@ -54,7 +54,7 @@ console.log(
     product1.price
 );
 
-/* MORE OBJECTS */
+/* MORE OBJECTS: BOOK LIST */
 
 const books = [];
 
