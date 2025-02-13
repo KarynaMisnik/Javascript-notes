@@ -98,7 +98,7 @@ function showBooks() {
   });
 }
 
-/* MORE OBJECTS */
+/* MORE OBJECTS: BANK ACCOUNT */
 
 const bankAccount = {
   saldo: 0,
