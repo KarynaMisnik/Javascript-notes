@@ -141,7 +141,7 @@ Inside these components there will be also two phases: memory creation phase and
 
 #### 👋 'Hello World'
 
-To print a simple first JavaScript program in the console and understand how HTML and JavaScript work together, we start by creating an HTML file. First, we need to link the HTML file to a JavaScript file. This is done by adding a **<script>** tag inside the **<body>** of the HTML file.
+To print a simple first JavaScript program in the console and understand how HTML and JavaScript work together, we start by creating an HTML file. First, we need to link the HTML file to a JavaScript file. This is done by adding a <script> tag inside the <body> of the HTML file.
 
 Next, open a JavaScript file and write:
 
