@@ -272,5 +272,6 @@ Arithmetic operators in JavaScript work similarly to those in mathematics.
 | \*       | multiplies values                        |
 | /        | divides values                           |
 
+
 Unlike languages like C, JavaScript does not require explicit type declarations for variables.
 If you divide two whole numbers and the result is not a whole number, JavaScript automatically returns a float instead of rounding the result.
