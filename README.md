@@ -135,7 +135,11 @@ Examples:
 
 <table>
   <tr>
-    
+    <th>Example 1</th>
+    <th>Example 2</th>
+    <th>Example 3</th>
+  </tr>
+<tr>
 <td><code>var x = 7;
 function getName(){
 conole.log("Hello");
