@@ -151,6 +151,12 @@ Primitive data types:
 7. BigInt(large number);
 
 JS has dynamic typing: we don't have to define data types of value stored in variable; data types are determined automatically. 
+> value has type NOT variable;
+
+| Undefined | not defined |
+|:----:|:-----:|
+|is not equal to emty|when variable is not ellocated in code eg.: <code>var a = 7; console.log(x);</code>|
+
 
 ## Naming Convention
 
