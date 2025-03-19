@@ -138,6 +138,9 @@ A value in JS is <ins>always</ins>:
 
 > if a value is not an object, it's primitive
 
+A priitive value is a value that has no properties or methods;
+A primitive data type - has primitive value;
+
 ## Naming Convention
 
 ## Object
