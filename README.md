@@ -129,6 +129,41 @@ Inside these components there will be also two phases: memory creation phase and
 
 ## Hoisting
 
+It is a process whereby the interpreter appears to move the declaration of functions, vars, classes or imports to the top of their scope, prior to execution of the code; 
+
+Examples:
+
+<table>
+  <tr>
+    
+<td><code>var x = 7;
+function getName(){
+conole.log("Hello");
+}
+getName();
+console.log(x);
+</code></td>
+  
+<td><code>getName();
+  console.log(x);
+    var x = 7;
+    function getName(){
+    console.log("Hello");
+    }
+</code>
+  </td>
+  
+    <td><code>getName();
+    console.log(x);
+      function getName(){
+      console.log("Hello");
+      }
+      </code>
+    </td>
+  </tr>
+</table>
+
+
 ## Data Types
 
 A value in JS is <ins>always</ins>: 
