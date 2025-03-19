@@ -150,6 +150,8 @@ Primitive data types:
 6. Symbol(unique value);
 7. BigInt(large number);
 
+JS has dynamic typing: we don't have to define data types of value stored in variable; data types are determined automatically. 
+
 ## Naming Convention
 
 ## Object
