@@ -158,13 +158,13 @@ console.log(x);
 </code>
   </td>
   
-    <td><code>getName();
+   <td><code>getName();
     console.log(x);
       function getName(){
       console.log("Hello");
       }
-      </code>
-    </td>
+   </code>
+  </td>
   </tr>
 </table>
 
