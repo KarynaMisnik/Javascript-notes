@@ -155,8 +155,12 @@ JS has dynamic typing: we don't have to define data types of value stored in var
 
 | Undefined | not defined |
 |:----:|:-----:|
-|is not equal to emty|when variable is not ellocated in code eg.: <code>var a = 7; console.log(x);</code>|
+|is not equal to emty|  when variable is not ellocated in code eg.: <code>var a = 7; console.log(x);</code>|
+| when variable is printed before declaration| there is no 'x', program tries to find it but it was not declared, so it is not defined |
+| variable is ellocated in global execution context |  |
 
+> Undefined is reserved word;
+> Undefined - is a special placeholder, stores memory place for code;
 
 ## Naming Convention
 
