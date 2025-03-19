@@ -142,7 +142,8 @@ conole.log("Hello");
 }
 getName();
 console.log(x);
-</code></td>
+</code>
+  </td>
   
 <td><code>getName();
   console.log(x);
