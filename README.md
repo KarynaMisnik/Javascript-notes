@@ -141,6 +141,15 @@ A value in JS is <ins>always</ins>:
 A priitive value is a value that has no properties or methods;
 A primitive data type - has primitive value;
 
+Primitive data types:
+1. Number;
+2. Sttring;
+3. Boolean(logic type);
+4. Undefined(variable that is not yet defined, empty);
+5. Null;
+6. Symbol(unique value);
+7. BigInt(large number);
+
 ## Naming Convention
 
 ## Object
