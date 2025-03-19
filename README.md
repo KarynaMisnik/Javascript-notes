@@ -131,6 +131,13 @@ Inside these components there will be also two phases: memory creation phase and
 
 ## Data Types
 
+A value in JS is <ins>always</ins>: 
+
+1. **Object** <code>let me = { name: "Jonas"};</code>
+2. **Primitive** <code>let firstName = 'Jonas'; let age = 30;</code>
+
+> if a value is not an object, it's primitive
+
 ## Naming Convention
 
 ## Object
