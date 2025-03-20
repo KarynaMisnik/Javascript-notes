@@ -29,6 +29,7 @@ During my study path, I used several sources of knowledge, including online tuto
 * [JS Definition](#js-definition)
 * [Javascript Versions](#javascript-versions)
 * [How to run JavaScript](#how-to-run-javascript)
+* [Values and Variables](#values-and-variables)
 * [Hoisting](#hoisting)
 * [Data Types](#data-types)
   - [string](#string)
@@ -126,6 +127,16 @@ Code execution phase goes line by line but if it faces a function, it ignores it
 
 Code execution phase while running the code and its functions, creates two components: memory and code components.
 Inside these components there will be also two phases: memory creation phase and code execution phase.
+
+## Values and Variables
+
+<code>console.log("Hello");</code> - it's a value, the smallest unit which we store in variables.
+
+<code>let firstName = 'Jonas';</code>
+
+> let firstName - variable;
+> '=' assign a value to a variable;
+> 'Jonas' - value; 
 
 ## Hoisting
 
