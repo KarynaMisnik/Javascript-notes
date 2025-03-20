@@ -175,6 +175,11 @@ console.log(x);
 
 In JS you can get result even before declaration, especially working with functions. Compiler will not show errors. Even before execution of code JS creates Call Stack with Memoty execution phase where variable allocated with undefined value; in case of functions, it stores in memory fully. 
 
+**Synopsis:**
+
+* being able to use var's value in its scope before the line it is declared('value hoisting');
+  
+
 ## Data Types
 
 A value in JS is <ins>always</ins>: 
