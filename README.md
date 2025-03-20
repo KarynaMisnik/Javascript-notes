@@ -166,6 +166,11 @@ console.log(x);
    </code>
   </td>
   </tr>
+  <tr>
+    <td>Output: <code>Hello, 7</code></td>
+    <td>Output: <code>Hello, undefined</code></td>
+    <td>Output: <code>Hello</code> Error: 'x' is not defined</td>
+  </tr>
 </table>
 
 
