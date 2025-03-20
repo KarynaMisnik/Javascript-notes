@@ -140,6 +140,12 @@ Inside these components there will be also two phases: memory creation phase and
 
 ‼️ **var** is only for maintainig old code, it is not used in modern apps. 
 
+#### let and const
+
+let and const are hoisted but differently from var.
+They appear in temporal 'Dead Zone'.
+
+
 ## Hoisting
 
 It is a process whereby the interpreter appears to move the declaration of functions, vars, classes or imports to the top of their scope, prior to execution of the code; 
