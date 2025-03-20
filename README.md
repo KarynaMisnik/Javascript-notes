@@ -178,6 +178,9 @@ In JS you can get result even before declaration, especially working with functi
 **Synopsis:**
 
 * being able to use var's value in its scope before the line it is declared('value hoisting');
+* being able to reference var in its scope before line it is declared, without Reference Error, but the value-always undefined;
+* the declaration of var causes behavior changes in its scope before the line in which it is declared;
+* the side effect of declaration is produced before evaluating; the rest of code that contains it;    
   
 
 ## Data Types
