@@ -134,9 +134,11 @@ Inside these components there will be also two phases: memory creation phase and
 
 <code>let firstName = 'Jonas';</code>
 
-> let firstName - variable;
+> let firstName - declaring a variable;
 > '=' assign a value to a variable;
-> 'Jonas' - value; 
+> 'Jonas' - value;
+
+‼️ **var** is only for maintainig old code, it is not used in modern apps. 
 
 ## Hoisting
 
