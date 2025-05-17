@@ -202,7 +202,6 @@ In JS you can get result even before declaration, especially working with functi
 * the declaration of var causes behavior changes in its scope before the line in which it is declared;
 * the side effect of declaration is produced before evaluating; the rest of code that contains it;    
   
-
 ## Data Types
 
 A value in JS is <ins>always</ins>: 
@@ -250,15 +249,18 @@ To print a simple first JavaScript program in the console and understand how HTM
 
 Next, open a JavaScript file and write:
 
-<code>console.log("Hello, World!");</code>
-
+```js
+console.log("Hello, World!");
+```
 An HTML file with the **.html** extension can be easily opened by clicking on it. The page will appear blank because our script only logs output to the console. To see the result, open the browser’s developer tools by pressing F12 and navigate to the Console tab.
 
 #### ⚠️ Alert-dialog
 
 To display the same result in a popup window, similar to an alert dialog, use the <code>alert()</code> function in your JavaScript file:
 
-<code>alert("Hello World");</code>
+```js
+alert("Hello World");
+```
 
 This will show the phrase as a browser notification-style popup.
 
