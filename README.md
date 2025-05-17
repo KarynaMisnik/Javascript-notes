@@ -109,14 +109,15 @@ ECMAScript is the official name of the language. Since 2016, versions are named 
 Shortly, while code is being executed the whole process is held inside **global execution context** which is divided into two phases: **memory phase** and **code execution phase**. Let's dive deeper in these terms.
 
 Code example:<br>
-
-<code>var n = 2;
+```js
+var n = 2;
 function square(num){
 var ans = num \* num;
 return ans;
 }
 var square2 = square(n);
-var square4 = square(n);</code>
+var square4 = square(n);
+```
 
 In first phase (memory phase) <code>n</code>
 is just allocated and <code>n</code> will be undefined, while in the second phase(code execution phase) <code>n</code> will be equal to <code>2</code>
