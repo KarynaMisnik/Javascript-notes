@@ -281,7 +281,9 @@ This will show the phrase as a browser notification-style popup.
 
 **Math()** is a built-in <insa>object</insa> in JavaScript. It provides mathematical constants and functions, such as **Math.PI**, **Math.sqrt()**, and **Math.random()**.
 
-<code>console.log(Math.random()); // Outputs a random number between 0 and 1</code>
+```js
+console.log(Math.random()); // Outputs a random number between 0 and 1
+```
 
 > Note: Unlike many other objects, Math is not a ~~constructor~~, meaning you can't create instances of it using <code>new Math()</code>.
 
@@ -297,8 +299,9 @@ To manipulate the DOM (Document Object Model) using JavaScript, follow these ste
 
 First, create an &lt;h1&gt; tag with some text between the tags and assign it a unique id:
 
-<code>&lt;h1&gt; id="text">Milky Way 🌌 &lt;h1&gt;</code>
-
+```js
+&lt;h1&gt; id="text">Milky Way 🌌 &lt;h1&gt;
+```
 > Note: HTML file
 
 <ins>2. Access the \*&lt;h1&gt; Element in JavaScript</ins>
