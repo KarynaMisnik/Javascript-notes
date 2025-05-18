@@ -133,7 +133,9 @@ Inside these components there will be also two phases: memory creation phase and
 
 <code>console.log("Hello");</code> - it's a value, the smallest unit which we store in variables.
 
-<code>let firstName = 'Jonas';</code>
+```js
+let firstName = 'Jonas';
+```
 
 > let firstName - declaring a variable;
 > '=' assign a value to a variable;
@@ -145,7 +147,6 @@ Inside these components there will be also two phases: memory creation phase and
 
 let and const are hoisted but differently from var.
 They appear in temporal 'Dead Zone'.
-
 
 ## Hoisting
 
@@ -206,8 +207,14 @@ In JS you can get result even before declaration, especially working with functi
 
 A value in JS is <ins>always</ins>: 
 
-1. **Object** <code>let me = { name: "Jonas"};</code>
-2. **Primitive** <code>let firstName = 'Jonas'; let age = 30;</code>
+1. **Object**
+```js
+let me = { name: "Jonas"};
+```
+2. **Primitive**
+```js
+let firstName = 'Jonas'; let age = 30;
+```
 
 > if a value is not an object, it's primitive
 
