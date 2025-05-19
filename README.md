@@ -275,7 +275,9 @@ This will show the phrase as a browser notification-style popup.
 
 **Date()** is a <ins>constructor</ins> function in JavaScript. You can use <code>new Date()</code> to create a new date object. It is useful for operating with time.
 
-<code>console.log(Date()); // Outputs the current date as a string, not an object</code>
+```js
+console.log(Date()); // Outputs the current date as a string, not an object
+```
 
 > Note: Calling **Date()** without new returns the current date and time as a string instead of an object.
 
