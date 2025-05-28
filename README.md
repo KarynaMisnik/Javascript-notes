@@ -310,9 +310,10 @@ First, create an &lt;h1&gt; tag with some text between the tags and assign it a 
 
 In your JavaScript file, declare a variable and assign it to the content of the &lt;h1&gt; tag by referencing its id:
 
-<code>let printingText = document.getElementById("text").innerHTML;
+```js
+let printingText = document.getElementById("text").innerHTML;
 console.log(printingText);
-</code>
+```
 
 > Note: JS file
 
