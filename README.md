@@ -357,7 +357,8 @@ If we assign a **numeric** value to a variable, quotes are not ~~needed~~.
 A **Boolean** variable has only two values: **true** or **false**. Boolean values should <ins>not be enclosed</ins> in quotes.
 They are mostly used with logical operators in if statements to check conditions.<br>
 
-<code>let firstName = "Sponge Bob";
+```js
+let firstName = "Sponge Bob";
 console.log(firstName);
 let lastName = "Squarepants";
 console.log(lastName);
@@ -369,7 +370,7 @@ let isStudent = true;
 console.log(isStudent);
 console.log(`My name is ${firstName} ${lastName} and 
 I am ${age} years old. At the moment I'm a student: ${isStudent}`);
-</code>
+```
 
 **Modulus %**
 
