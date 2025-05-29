@@ -380,10 +380,12 @@ I am ${age} years old. At the moment I'm a student: ${isStudent}`);
 
 The modulus operator **%** in JavaScript returns the <ins>remainder</ins> of a division. It’s useful for checking even/odd numbers, looping patterns, and cyclic behaviors. If the remainder is <code>0</code>, the dividend is perfectly divisible by the divisor.<br>
 
-<code>let studentsScore = 6;
+```js
+let studentsScore = 6;
 let maxScore = 19;
 let scoreResult = studentsScore % maxScore;
-console.log(studentsScore + " % " + maxScore + " = " + Math.round(scoreResult));</code>
+console.log(studentsScore + " % " + maxScore + " = " + Math.round(scoreResult));
+```
 
 **➗ Arithmetic operators**
 
