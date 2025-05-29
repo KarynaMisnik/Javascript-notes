@@ -330,7 +330,9 @@ Similarly, you can manipulate the content of a button by using the &lt;input&gt;
 
 In your JavaScript file, you can set the button's text using its id. You don't need to add content directly in the HTML, as you can set the button's text through JavaScript:
 
-<code>document.getElementById("your_id_for_input").value = "Click me";</code>
+```js
+document.getElementById("your_id_for_input").value = "Click me";
+```
 
 > Note: JS file
 
