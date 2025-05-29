@@ -321,8 +321,9 @@ console.log(printingText);
 
 Similarly, you can manipulate the content of a button by using the &lt;input&gt; tag with **type="button"**.
 
-<code>&lt;input type="button" id="btn-one" &gt;</code>
-
+```js
+&lt;input type="button" id="btn-one" &gt;
+```
 > Note: html file
 
 <ins>4. Assign Text to the Button</ins>
