@@ -333,7 +333,6 @@ In your JavaScript file, you can set the button's text using its id. You don't n
 ```js
 document.getElementById("your_id_for_input").value = "Click me";
 ```
-
 > Note: JS file
 
 #### Variables
@@ -352,14 +351,14 @@ Use meaningful variable names. Variable names should be short but informative, g
 To create a variable with a string value, first declare a variable.
 
 For now, we will use let to do so. To assign a value to a variable, use the equals sign **=**.
-A string must be enclosed in double (") or single (') quotes.
+A string must be enclosed in double **(")** or single **(')** quotes.
 
 To display a variable in the console, use <code>console.log(variableName)</code>.
 
 If we assign a **numeric** value to a variable, quotes are not ~~needed~~.
 
 A **Boolean** variable has only two values: **true** or **false**. Boolean values should <ins>not be enclosed</ins> in quotes.
-They are mostly used with logical operators in if statements to check conditions.<br>
+They are mostly used with logical operators in if statements to check conditions.
 
 ```js
 let firstName = "Sponge Bob";
@@ -378,7 +377,7 @@ I am ${age} years old. At the moment I'm a student: ${isStudent}`);
 
 **Modulus %**
 
-The modulus operator **%** in JavaScript returns the <ins>remainder</ins> of a division. It’s useful for checking even/odd numbers, looping patterns, and cyclic behaviors. If the remainder is <code>0</code>, the dividend is perfectly divisible by the divisor.<br>
+The modulus operator **%** in JavaScript returns the <ins>remainder</ins> of a division. It’s useful for checking even/odd numbers, looping patterns, and cyclic behaviors. If the remainder is <code>0</code>, the dividend is perfectly divisible by the divisor.
 
 ```js
 let studentsScore = 6;
@@ -397,7 +396,6 @@ Arithmetic operators in JavaScript work similarly to those in mathematics.
 | -        | subtracts one numeric value from another |
 | \*       | multiplies values                        |
 | /        | divides values                           |
-
 
 Unlike languages like C, JavaScript does not require explicit type declarations for variables.
 If you divide two whole numbers and the result is not a whole number, JavaScript automatically returns a float instead of rounding the result.
