@@ -327,10 +327,25 @@ a: <uninitialized>  // TDZ
 b: undefined
 ```
 
-#### let and const
+<h3>Step 2: Run <code>console.log(a)</code</h3>
 
-let and const are hoisted but differently from var.
-They appear in temporal 'Dead Zone'.
+At this point:
+
+The variable <code>a</code> exists, because <code>let a</code> has been hoisted.
+
+But it’s in the **Temporal Dead Zone (TDZ)**: from the start of the scope (here: the whole script) until its declaration is executed, any access to <code>a</code> is illegal.
+
+So this line:
+
+```js
+console.log(a);
+```
+
+throws a <code>ReferenceError</code>:
+
+```js
+ReferenceError: Cannot access 'a' before initialization
+```
 
 ## Hoisting
 
