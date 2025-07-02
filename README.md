@@ -312,6 +312,21 @@ let a = 10;
 var b = 100;
 ```
 
+When the engine executes this code:
+
+<h3>Step 1: Hoisting</h3>
+
+<code>let a</code> is <ins>hoisted</ins>, but it is placed in the TDZ — it is not initialized yet.
+
+<code>var b</code> is also hoisted, but it’s initialized to <code>undefined</code> immediately.
+
+So before the code executes, the environment looks like this:
+
+```js
+a: <uninitialized>  // TDZ
+b: undefined
+```
+
 #### let and const
 
 let and const are hoisted but differently from var.
