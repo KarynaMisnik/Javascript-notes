@@ -347,6 +347,16 @@ throws a <code>ReferenceError</code>:
 ReferenceError: Cannot access 'a' before initialization
 ```
 
+<h3>Step 3: Execution halts</h3>
+
+Because an uncaught error occurs at <code>console.log(a)</code>, the rest of the code (<code>let a = 10;</code> <code>var b = 100;</code>) is not executed.
+
+🔷 2. Why does the TDZ happen?
+
+✅ For <code>let</code> and <code>const</code>, the TDZ exists to prevent using a variable before it is explicitly declared.
+✅ It encourages cleaner, more predictable code.
+✅ Even though <code>let/const</code> are hoisted, they are not initialized to undefined — unlike <code>var</code>.
+
 ## Hoisting
 
 It is a process whereby the interpreter appears to move the declaration of functions, vars, classes or imports to the top of their scope, prior to execution of the code;
