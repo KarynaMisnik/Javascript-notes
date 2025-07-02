@@ -302,7 +302,15 @@ let firstName = "Jonas";
 > '=' assign a value to a variable;
 > 'Jonas' - value;
 
-‼️ **var** is only for maintainig old code, it is not used in modern apps.
+‼️ **var** is only for maintainig old code, it is not used in modern apps(see why).
+
+🔷 1. What happens at runtime of this snippet of code?
+
+```js
+console.log(a);
+let a = 10;
+var b = 100;
+```
 
 #### let and const
 
