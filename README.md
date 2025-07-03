@@ -446,58 +446,52 @@ This condition fails because <code>user</code> is <code>undefined</code>, but th
 
 ## Hoisting
 
-It is a process whereby the interpreter appears to move the declaration of functions, vars, classes or imports to the top of their scope, prior to execution of the code;
+Hoisting is a behavior of the JavaScript engine during the Creation Phase of an execution context, where:
 
-Examples:
+<ul><li>variable and function declarations are moved to the top of their scope (in memory)</li>
 
-<table>
-  <tr>
-    <th>Example 1</th>
-    <th>Example 2</th>
-    <th>Example 3</th>
-  </tr>
-<tr>
-<td><code>var x = 7;
-function getName(){
-conole.log("Hello");
+<li>before any code actually executes</li>
+</ul>
+
+```js
+console.log(foo); // undefined
+var foo = 42;
+```
+
+Here, <code>var foo</code> is hoisted to the top of the scope and initialized to <code>undefined</code>. Then later it’s assigned <code>42</code>.
+
+```js
+bar(); // works!
+function bar() {
+  console.log("Hello");
 }
-getName();
-console.log(x);
-</code>
-  </td>
-  
-<td><code>getName();
-  console.log(x);
-    var x = 7;
-    function getName(){
-    console.log("Hello");
-    }
-</code>
-  </td>
-  
-   <td><code>getName();
-    console.log(x);
-      function getName(){
-      console.log("Hello");
-      }
-   </code>
-  </td>
-  </tr>
-  <tr>
-    <td>Output: <code>Hello, 7</code></td>
-    <td>Output: <code>Hello, undefined</code></td>
-    <td>Output: <code>Hello</code> Error: 'x' is not defined</td>
-  </tr>
-</table>
+```
 
-In JS you can get result even before declaration, especially working with functions. Compiler will not show errors. Even before execution of code JS creates Call Stack with Memoty execution phase where variable allocated with undefined value; in case of functions, it stores in memory fully.
+Here, the entire function declaration is hoisted.
 
-**Synopsis:**
+🪄 Analogy:
 
-- being able to use var's value in its scope before the line it is declared('value hoisting');
-- being able to reference var in its scope before line it is declared, without Reference Error, but the value-always undefined;
-- the declaration of var causes behavior changes in its scope before the line in which it is declared;
-- the side effect of declaration is produced before evaluating; the rest of code that contains it;
+Think of hoisting like reserving seats in a theater before the show starts.
+Even though you walk in later, your seat was already marked with your name — the engine just hasn’t filled it yet (<code>undefined</code> for <code>var</code>, <code>uninitialized</code> for <code>let/const</code>).
+
+🔷 How the JS engine works
+
+When JS runs, it does two passes over your code:
+✅ Pass 1: Creation Phase (set up memory, hoist declarations)
+✅ Pass 2: Execution Phase (run your code line by line)
+
+Why two passes? Because JS is interpreted and single-threaded — it needs to know what variables exist before it can start executing.
+So it allocates memory for all declared variables and functions upfront.
+
+🧠 Why keep hoisting today?
+
+Even though it can be confusing, hoisting is still part of the language because:
+
+It’s deeply baked into how the engine parses & executes code
+
+It allows for features like function declarations being callable anywhere in scope
+
+Breaking backward compatibility would break a lot of old code
 
 ## Data Types
 
