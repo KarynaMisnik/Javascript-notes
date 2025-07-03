@@ -347,6 +347,57 @@ throws a <code>ReferenceError</code>:
 ReferenceError: Cannot access 'a' before initialization
 ```
 
+🔷 3. Why doesn’t var behave the same?
+
+✅ var declarations are hoisted and initialized to <code>undefined</code>.
+✅ So if you did:
+
+```js
+console.log(b);
+var b = 100;
+```
+
+You'd see:
+
+```js
+undefined;
+```
+
+Because <code>b</code> exists and is <code>undefined</code> before assignment.
+
+🔷 4. Summary table
+
+<table>
+  <tr>
+    <th>Declaration Type</th>
+    <th>Hoisted?</th>
+    <th>Initialized?</th>
+    <th>TDZ?</th>
+    <th>Access Before Declaration</th>
+  </tr>
+  <tr>
+    <td>var</td>
+    <td>Yes</td>
+    <td>Yes (undefined)</td>
+    <td>No</td>
+    <td>undefined</td>
+  </tr>
+  <tr>
+    <td>let</td>
+    <td>Yes</td>
+    <td>No</td>
+    <td>Yes</td>
+    <td>ReferenceError</td>
+  </tr>
+  <tr>
+    <td>const</td>
+    <td>Yes</td>
+    <td>No</td>
+    <td>Yes</td>
+    <td>ReferenceError</td>
+  </tr>
+</table>
+
 <h3>Step 3: Execution halts</h3>
 
 Because an uncaught error occurs at <code>console.log(a)</code>, the rest of the code (<code>let a = 10;</code> <code>var b = 100;</code>) is not executed.
