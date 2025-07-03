@@ -31,6 +31,7 @@ During my study path, I used several sources of knowledge, including online tuto
 * [How to run JavaScript](#how-to-run-javascript)
 * [Call Stack](#call-stack)
 * [Values and Variables](#values-and-variables)
+* [Why not var](#why-not-var)
 * [Hoisting](#hoisting)
 * [Data Types](#data-types)
   - [string](#string)
@@ -347,6 +348,16 @@ throws a <code>ReferenceError</code>:
 ReferenceError: Cannot access 'a' before initialization
 ```
 
+<h3>Step 3: Execution halts</h3>
+
+Because an uncaught error occurs at <code>console.log(a)</code>, the rest of the code (<code>let a = 10;</code> <code>var b = 100;</code>) is not executed.
+
+🔷 2. Why does the TDZ happen?
+
+✅ For <code>let</code> and <code>const</code>, the TDZ exists to prevent using a variable before it is explicitly declared.
+✅ It encourages cleaner, more predictable code.
+✅ Even though <code>let/const</code> are hoisted, they are not initialized to undefined — unlike <code>var</code>.
+
 🔷 3. Why doesn’t var behave the same?
 
 ✅ var declarations are hoisted and initialized to <code>undefined</code>.
@@ -398,15 +409,40 @@ Because <code>b</code> exists and is <code>undefined</code> before assignment.
   </tr>
 </table>
 
-<h3>Step 3: Execution halts</h3>
+## Why not var
 
-Because an uncaught error occurs at <code>console.log(a)</code>, the rest of the code (<code>let a = 10;</code> <code>var b = 100;</code>) is not executed.
+The key reasons <code>var</code> fell out of favor, and why <code>let/const</code> were introduced in **ES6 (2015)**, because <code>var</code> was problematic
 
-🔷 2. Why does the TDZ happen?
+🔷 1. <code>var</code> is hoisted and initialized to <code>undefined</code>
 
-✅ For <code>let</code> and <code>const</code>, the TDZ exists to prevent using a variable before it is explicitly declared.
-✅ It encourages cleaner, more predictable code.
-✅ Even though <code>let/const</code> are hoisted, they are not initialized to undefined — unlike <code>var</code>.
+When you declare a variable with <code>var</code>, it is hoisted and already initialized to <code>undefined</code> before your code executes.
+
+Example:
+
+```js
+console.log(foo); // undefined
+var foo = 42;
+console.log(foo); // 42
+```
+
+This often confused developers:
+
+Why doesn’t <code>console.log(foo)</code> throw an error?
+
+Why is <code>foo</code> undefined instead of throwing if I forgot to initialize?
+
+🔷 2. Bugs from accidental <code>undefined</code>
+
+Since <code>var</code> silently initializes to undefined, forgetting to actually assign a value can lead to subtle bugs later:
+
+```js
+var user;
+if (user) {
+  doSomething();
+}
+```
+
+This condition fails because <code>user</code> is <code>undefined</code>, but the developer might have assumed they hadn’t declared it yet.
 
 ## Hoisting
 
