@@ -633,48 +633,7 @@ Why?
 
 ## Data Types
 
-A value in JS is <ins>always</ins>:
-
-1. **Object**
-
-```js
-let me = { name: "Jonas" };
-```
-
-2. **Primitive**
-
-```js
-let firstName = "Jonas";
-let age = 30;
-```
-
-> if a value is not an object, it's primitive
-
-A priitive value is a value that has no properties or methods;
-A primitive data type - has primitive value;
-
-Primitive data types:
-
-1. Number;
-2. Sttring;
-3. Boolean(logic type);
-4. Undefined(variable that is not yet defined, empty);
-5. Null;
-6. Symbol(unique value);
-7. BigInt(large number);
-
-JS has dynamic typing: we don't have to define data types of value stored in variable; data types are determined automatically.
-
-> value has type NOT variable;
-
-|                     Undefined                     |                                       not defined                                       |
-| :-----------------------------------------------: | :-------------------------------------------------------------------------------------: |
-|               is not equal to empty               |   when variable is not ellocated in code eg.: <code>var a = 7; console.log(x);</code>   |
-|    when variable is printed before declaration    | there is no 'x', program tries to find it but it was not declared, so it is not defined |
-| variable is ellocated in global execution context |                                                                                         |
-
-> Undefined is reserved word;
-> Undefined - is a special placeholder, stores memory place for code;
+JavaScript is a dynamically typed, loosely typed language, where the type of a variable is determined at runtime and can change.
 
 ## Naming Convention
 
