@@ -34,6 +34,7 @@ During my study path, I used several sources of knowledge, including online tuto
 * [Why not var](#why-not-var)
 * [Hoisting](#hoisting)
 * [Temporal Dead Zone](#temporal-dead-zone)
+* [Types of JavaScript Errors](#types-of-javaScript-errors)
 * [Data Types](#data-types)
   - [string](#string)
   - [undefined](#undefined)
@@ -549,6 +550,86 @@ Zone: it’s a specific range of execution
 ✅ TDZ is the phase when a <code>let</code> or <code>const</code> variable exists in scope but is not initialized yet.
 ✅ Accessing it then throws a <code>ReferenceError</code>.
 ✅ It exists to help catch bugs and enforce cleaner scoping rules.
+
+## Types of JavaScript Errors
+
+1️⃣ ReferenceError
+
+➡️ When you try to access a variable that doesn’t exist, or a variable in the TDZ.
+
+Example: accessing undeclared variable
+
+```js
+console.log(x); // ❌ ReferenceError: x is not defined
+```
+
+Example: accessing <code>let</code> in TDZ
+
+```js
+console.log(y); // ❌ ReferenceError: Cannot access 'y' before initialization
+let y = 10;
+```
+
+Why?
+✅ Scope exists, but binding is uninitialized (let TDZ).
+✅ Or binding doesn’t exist at all (<code>var x</code> never declared).
+
+2️⃣ SyntaxError
+
+➡️ When your code violates the JavaScript grammar rules — it cannot even parse, so the engine throws before running anything.
+
+Example: invalid syntax
+
+```js
+let a = ;  // ❌ SyntaxError: Unexpected token ';'
+```
+
+Example: <code>const</code> without initializer
+
+```js
+const b; // ❌ SyntaxError: Missing initializer in const declaration
+```
+
+Example: redeclaring let in same scope
+
+```js
+let a = 10;
+let a = 100;
+// ❌ SyntaxError: Identifier 'a' has already been declared
+```
+
+Why?
+✅ The parser sees two let declarations of the same identifier a in the same scope, which is explicitly forbidden by the ECMAScript spec.
+
+Why?
+✅ These are errors the parser can detect at parse time — code is malformed.
+
+3️⃣ TypeError
+
+➡️ When you perform an operation on a value of the wrong type.
+
+Example: calling something that’s not a function
+
+```js
+const num = 42;
+num(); // ❌ TypeError: num is not a function
+```
+
+Example: assigning to a constant
+
+```js
+const x = 10;
+x = 20; // ❌ TypeError: Assignment to constant variable
+```
+
+Why?
+✅ Here the code is syntactically correct, but at runtime the type of the value doesn’t support the operation.
+
+🌟 Takeaway
+
+✅ TDZ specifically results in a ReferenceError.
+✅ SyntaxErrors happen before execution.
+✅ TypeErrors happen at runtime, when the value’s type is wrong for the operation.
 
 ## Data Types
 
