@@ -33,6 +33,7 @@ During my study path, I used several sources of knowledge, including online tuto
 * [Values and Variables](#values-and-variables)
 * [Why not var](#why-not-var)
 * [Hoisting](#hoisting)
+* [Temporal Dead Zone](#temporal-dead-zone)
 * [Data Types](#data-types)
   - [string](#string)
   - [undefined](#undefined)
@@ -328,7 +329,7 @@ a: <uninitialized>  // TDZ
 b: undefined
 ```
 
-<h3>Step 2: Run <code>console.log(a)</code</h3>
+<h3>Step 2: Run <code>console.log(a)</code> </h3>
 
 At this point:
 
@@ -492,6 +493,62 @@ It’s deeply baked into how the engine parses & executes code
 It allows for features like function declarations being callable anywhere in scope
 
 Breaking backward compatibility would break a lot of old code
+
+## Temporal Dead Zone
+
+The TDZ is the time (or “zone”) between:
+
+when a <code>let</code> or <code>const</code> variable is hoisted into scope
+
+and when it is actually initialized with a value
+
+Any attempt to access the variable in this zone results in a <code>ReferenceError</code>: **Cannot access ‘x’ before initialization**.
+
+🔷 How is it implemented?
+
+When the JavaScript engine creates the scope:
+
+It hoists the variable name into the scope’s environment record.
+
+It marks the variable as “uninitialized”.
+
+Until the <code>let</code> or <code>const</code> line executes and assigns a value, that binding remains uninitialized.
+
+During this time, any get access to that variable fails.
+
+🔷 Memory model:
+During scope creation:
+
+```js
+Scope:
+  foo → uninitialized
+```
+
+TDZ lasts:
+
+✅ From the start of the scope
+✅ Until the line where you declare & initialize with let or const
+
+After:
+
+```js
+Scope:
+  foo → 42
+```
+
+🪄 Why is it called temporal dead zone?
+
+Temporal: it’s about time, not space — the time between entering scope and variable initialization
+
+Dead: the variable “exists” in memory but cannot be used
+
+Zone: it’s a specific range of execution
+
+🌟 Summary:
+
+✅ TDZ is the phase when a <code>let</code> or <code>const</code> variable exists in scope but is not initialized yet.
+✅ Accessing it then throws a <code>ReferenceError</code>.
+✅ It exists to help catch bugs and enforce cleaner scoping rules.
 
 ## Data Types
 
