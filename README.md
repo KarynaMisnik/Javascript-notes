@@ -160,6 +160,25 @@ Already allocated in memory; nothing happens here (function declarations are hoi
 
 Before assigning to <code>square2</code>, the engine calls <code>square(2)</code>, which creates a new Execution Context for <code>square</code>.
 
+🧪 🔍 Step 2: Function Execution Context (FEC) for <code>square(2)</code>
+
+Every function call creates a new Execution Context, which also has two phases:
+📌 1️⃣ Memory Creation Phase
+
+Allocates memory for:
+
+<code>num → 2 (passed as argument)</code>
+
+<code>ans → undefined</code>
+
+📌 2️⃣ Code Execution Phase
+
+Runs: <code>ans = num _ num; → ans = 2 _ 2 = 4</code>
+
+Runs: <code>return ans; → returns 4</code>
+
+This returned value <code>4</code> is assigned to <code>square2</code>.
+
 ## Values and Variables
 
 <code>console.log("Hello");</code> - it's a value, the smallest unit which we store in variables.
