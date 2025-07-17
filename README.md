@@ -191,6 +191,29 @@ Computes <code>ans = 4</code>
 
 Returns <code>4</code> → assigned to <code>square4</code>
 
+📝 Final Global Memory
+
+| Identifier | Value    |
+| ---------- | -------- |
+| n          | 2        |
+| square     | function |
+| square2    | 4        |
+| square4    | 4        |
+
+🧠 🔍 The Call Stack
+
+Every Execution Context is managed via the Call Stack:
+
+When the script starts → GEC is pushed on the stack.
+
+When <code>square()</code> is called → FEC is pushed.
+
+When <code>square()</code> returns → FEC is popped.
+
+Then next <code>square()</code> call happens → another FEC is pushed & popped.
+
+At the end, only GEC remains in the stack.
+
 ## Values and Variables
 
 <code>console.log("Hello");</code> - it's a value, the smallest unit which we store in variables.
