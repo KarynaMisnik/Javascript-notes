@@ -29,6 +29,7 @@ During my study path, I used several sources of knowledge, including online tuto
 * [JS Definition](#js-definition)
 * [Javascript Versions](#javascript-versions)
 * [How to run JavaScript](#how-to-run-javascript)
+* [Call Stack](#call-stack)
 * [Values and Variables](#values-and-variables)
 * [Hoisting](#hoisting)
 * [Data Types](#data-types)
@@ -213,6 +214,81 @@ When <code>square()</code> returns → FEC is popped.
 Then next <code>square()</code> call happens → another FEC is pushed & popped.
 
 At the end, only GEC remains in the stack.
+
+## Call Stack
+
+🔷 What is the Call Stack?
+
+The Call Stack is a data structure used by the JavaScript engine to keep track of what function is currently running, and what functions to return to once the current one finishes.
+
+It’s called a stack because it works like a stack of plates:
+
+You add to the top (<code>push</code>) when calling a function.
+
+You remove from the top (<code>pop</code>) when a function finishes.
+
+Because JavaScript is **single-threaded** — it can only execute one thing at a time — so it needs to know:
+✅ What code is currently running
+✅ Where to go back to after a function call
+
+When the script is done, the Global Execution Context also exits, and the stack is empty.
+
+#### Event Listener Example
+
+🔷 It might look like different event listeners have “different stacks” but there is only one call stack.
+
+When you set up multiple event listeners, each one waits for its event to happen.
+They don’t immediately execute — they just register **callbacks** in the browser’s Web APIs.
+When an event occurs (e.g. click, timeout), its callback is sent to the **task queue** (or microtask queue).
+
+Then, the **event loop** checks:
+
+Is the stack empty?
+
+If yes, it picks the next task from the queue and pushes it on the single stack.
+
+🧪 Example:
+
+```js
+document.addEventListener("click", () => console.log("click 1"));
+document.addEventListener("click", () => console.log("click 2"));
+
+console.log("end");
+```
+
+What happens:
+
+✅ JS starts running the global code:
+
+```js
+Call Stack: [Global]
+```
+
+✅ Sets up the event listeners → no stack activity here.
+
+✅ Executes <code>console.log('end')</code> → prints <code>end</code>
+
+```js
+Call Stack: []
+```
+
+✅ Now, the JS engine is idle until an event fires.
+
+When you click:
+
+The browser pushes the first listener callback onto the call stack.
+
+It runs, prints <code>click 1</code>, and the stack is empty again.
+
+Then the browser pushes the second listener callback onto the same stack.
+
+It runs, prints <code>click 2</code>, and the stack is empty again.
+
+🔷 Key takeaway:
+
+🟢 There is always just one single call stack.
+🟢 Event listeners just register callbacks — the stack processes them one at a time when the event happens.
+🟢 Even if multiple events fire quickly, they still execute one by one, as the event loop feeds them into the same stack.
 
 ## Values and Variables
 
