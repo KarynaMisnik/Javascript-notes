@@ -179,6 +179,18 @@ Runs: <code>return ans; → returns 4</code>
 
 This returned value <code>4</code> is assigned to <code>square2</code>.
 
+🧪 🔍 Step 3: Another FEC for <code>square(2)</code>
+
+Same as above. Another separate execution context is created for the second call.
+
+Allocates memory
+
+Assigns <code>num = 2</code>
+
+Computes <code>ans = 4</code>
+
+Returns <code>4</code> → assigned to <code>square4</code>
+
 ## Values and Variables
 
 <code>console.log("Hello");</code> - it's a value, the smallest unit which we store in variables.
