@@ -109,6 +109,7 @@ ECMAScript is the official name of the language. Since 2016, versions are named 
 Shortly, while code is being executed the whole process is held inside **global execution context** which is divided into two phases: **memory phase** and **code execution phase**. Let's dive deeper in these terms.
 
 Code example:<br>
+
 ```js
 var n = 2;
 function square(num){
@@ -129,19 +130,21 @@ Code execution phase goes line by line but if it faces a function, it ignores it
 Code execution phase while running the code and its functions, creates two components: memory and code components.
 Inside these components there will be also two phases: memory creation phase and code execution phase.
 
+<img src="js-runs.png">
+
 ## Values and Variables
 
 <code>console.log("Hello");</code> - it's a value, the smallest unit which we store in variables.
 
 ```js
-let firstName = 'Jonas';
+let firstName = "Jonas";
 ```
 
 > let firstName - declaring a variable;
 > '=' assign a value to a variable;
 > 'Jonas' - value;
 
-‼️ **var** is only for maintainig old code, it is not used in modern apps. 
+‼️ **var** is only for maintainig old code, it is not used in modern apps.
 
 #### let and const
 
@@ -150,7 +153,7 @@ They appear in temporal 'Dead Zone'.
 
 ## Hoisting
 
-It is a process whereby the interpreter appears to move the declaration of functions, vars, classes or imports to the top of their scope, prior to execution of the code; 
+It is a process whereby the interpreter appears to move the declaration of functions, vars, classes or imports to the top of their scope, prior to execution of the code;
 
 Examples:
 
@@ -194,26 +197,30 @@ console.log(x);
   </tr>
 </table>
 
-In JS you can get result even before declaration, especially working with functions. Compiler will not show errors. Even before execution of code JS creates Call Stack with Memoty execution phase where variable allocated with undefined value; in case of functions, it stores in memory fully. 
+In JS you can get result even before declaration, especially working with functions. Compiler will not show errors. Even before execution of code JS creates Call Stack with Memoty execution phase where variable allocated with undefined value; in case of functions, it stores in memory fully.
 
 **Synopsis:**
 
-* being able to use var's value in its scope before the line it is declared('value hoisting');
-* being able to reference var in its scope before line it is declared, without Reference Error, but the value-always undefined;
-* the declaration of var causes behavior changes in its scope before the line in which it is declared;
-* the side effect of declaration is produced before evaluating; the rest of code that contains it;    
-  
+- being able to use var's value in its scope before the line it is declared('value hoisting');
+- being able to reference var in its scope before line it is declared, without Reference Error, but the value-always undefined;
+- the declaration of var causes behavior changes in its scope before the line in which it is declared;
+- the side effect of declaration is produced before evaluating; the rest of code that contains it;
+
 ## Data Types
 
-A value in JS is <ins>always</ins>: 
+A value in JS is <ins>always</ins>:
 
 1. **Object**
+
 ```js
-let me = { name: "Jonas"};
+let me = { name: "Jonas" };
 ```
+
 2. **Primitive**
+
 ```js
-let firstName = 'Jonas'; let age = 30;
+let firstName = "Jonas";
+let age = 30;
 ```
 
 > if a value is not an object, it's primitive
@@ -222,6 +229,7 @@ A priitive value is a value that has no properties or methods;
 A primitive data type - has primitive value;
 
 Primitive data types:
+
 1. Number;
 2. Sttring;
 3. Boolean(logic type);
@@ -230,14 +238,15 @@ Primitive data types:
 6. Symbol(unique value);
 7. BigInt(large number);
 
-JS has dynamic typing: we don't have to define data types of value stored in variable; data types are determined automatically. 
+JS has dynamic typing: we don't have to define data types of value stored in variable; data types are determined automatically.
+
 > value has type NOT variable;
 
-| Undefined | not defined |
-|:----:|:-----:|
-|is not equal to emty|  when variable is not ellocated in code eg.: <code>var a = 7; console.log(x);</code>|
-| when variable is printed before declaration| there is no 'x', program tries to find it but it was not declared, so it is not defined |
-| variable is ellocated in global execution context |  |
+|                     Undefined                     |                                       not defined                                       |
+| :-----------------------------------------------: | :-------------------------------------------------------------------------------------: |
+|               is not equal to empty               |   when variable is not ellocated in code eg.: <code>var a = 7; console.log(x);</code>   |
+|    when variable is printed before declaration    | there is no 'x', program tries to find it but it was not declared, so it is not defined |
+| variable is ellocated in global execution context |                                                                                         |
 
 > Undefined is reserved word;
 > Undefined - is a special placeholder, stores memory place for code;
@@ -259,6 +268,7 @@ Next, open a JavaScript file and write:
 ```js
 console.log("Hello, World!");
 ```
+
 An HTML file with the **.html** extension can be easily opened by clicking on it. The page will appear blank because our script only logs output to the console. To see the result, open the browser’s developer tools by pressing F12 and navigate to the Console tab.
 
 #### ⚠️ Alert-dialog
@@ -304,6 +314,7 @@ First, create an &lt;h1&gt; tag with some text between the tags and assign it a 
 ```js
 &lt;h1&gt; id="text">Milky Way 🌌 &lt;h1&gt;
 ```
+
 > Note: HTML file
 
 <ins>2. Access the \*&lt;h1&gt; Element in JavaScript</ins>
@@ -324,6 +335,7 @@ Similarly, you can manipulate the content of a button by using the &lt;input&gt;
 ```js
 &lt;input type="button" id="btn-one" &gt;
 ```
+
 > Note: html file
 
 <ins>4. Assign Text to the Button</ins>
@@ -333,6 +345,7 @@ In your JavaScript file, you can set the button's text using its id. You don't n
 ```js
 document.getElementById("your_id_for_input").value = "Click me";
 ```
+
 > Note: JS file
 
 #### Variables
