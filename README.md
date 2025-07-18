@@ -120,17 +120,28 @@ var square2 = square(n);
 var square4 = square(n);
 ```
 
-In first phase (memory phase) <code>n</code>
-is just allocated and <code>n</code> will be undefined, while in the second phase(code execution phase) <code>n</code> will be equal to <code>2</code>
+🧪 🔍 Step 1: Global Execution Context (GEC)
 
-Code execution phase goes line by line but if it faces a function, it ignores it and goes to the next line because a function is fully allocated in the first phase
+When the JS engine starts, it creates the Global Execution Context, which has two phases:
+📌 1️⃣ Memory Creation Phase (a.k.a. Creation Phase, Hoisting Phase)
 
-**Code execution phase** - it executes after a variable allocation made in memory creation phase.
+The engine scans the whole code and allocates memory for:
 
-Code execution phase while running the code and its functions, creates two components: memory and code components.
-Inside these components there will be also two phases: memory creation phase and code execution phase.
+Variables: initialized to undefined
 
-<img src="js-runs.png">
+Function declarations: allocated as actual function objects
+
+Scope: created
+
+At this point:
+
+<code>n → undefined</code>
+
+<code>square → <function object></code>
+
+<code>square2 → undefined</code>
+
+<code>square4 → undefined</code>
 
 ## Values and Variables
 
