@@ -127,7 +127,7 @@ When the JS engine starts, it creates the Global Execution Context, which has tw
 
 The engine scans the whole code and allocates memory for:
 
-Variables: initialized to undefined
+Variables: initialized to <code>undefined</code>
 
 Function declarations: allocated as actual function objects
 
@@ -142,6 +142,23 @@ At this point:
 <code>square2 → undefined</code>
 
 <code>square4 → undefined</code>
+
+📌 2️⃣ Code Execution Phase
+
+Now it actually runs the code line by line, replacing <code>undefined</code> with real values, and executing logic.
+Line by line:
+
+✅ <code>var n = 2;</code>
+
+Assigns <code>2</code> to <code>n</code>.
+
+✅ <code>function square(num) {...}</code>
+
+Already allocated in memory; nothing happens here (function declarations are hoisted fully).
+
+✅ <code>var square2 = square(n);</code>
+
+Before assigning to <code>square2</code>, the engine calls <code>square(2)</code>, which creates a new Execution Context for <code>square</code>.
 
 ## Values and Variables
 
