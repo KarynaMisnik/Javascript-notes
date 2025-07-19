@@ -672,6 +672,40 @@ undefined === null; // false
 
 <code>bigint</code> is useful when integers exceed <code>Number.MAX_SAFE_INTEGER</code>
 
+📚 2️⃣ Object Types
+
+Objects are collections of key-value pairs (mutable).
+✅ Compared by reference — even two identical-looking objects are different:
+
+```js
+{} === {} // false
+```
+
+Examples of object types:
+
+| Object Type    | Example             | Description               |
+| -------------- | ------------------- | ------------------------- |
+| Object literal | `{ name: "Jonas" }` | Key-value pairs           |
+| Array          | `[1, 2, 3]`         | Ordered list of values    |
+| Function       | `function() {}`     | Callable object           |
+| Date           | `new Date()`        | Date and time object      |
+| RegExp         | `/abc/`             | Regular expression object |
+| Error          | `new Error("msg")`  | Error object              |
+
+✅ Even functions are objects in JavaScript:
+
+```js
+typeof function () {} === "function";
+typeof (() => {}) === "function";
+```
+
+✅ Arrays are specialized objects with numeric keys:
+
+```js
+typeof [] === "object";
+Array.isArray([]) === true;
+```
+
 ## Naming Convention
 
 ## Object
