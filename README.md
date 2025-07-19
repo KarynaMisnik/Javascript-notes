@@ -706,6 +706,62 @@ typeof [] === "object";
 Array.isArray([]) === true;
 ```
 
+🔷 Special notes:
+
+Dynamic typing:
+A variable’s type is determined at runtime and can change:
+
+```js
+let x = 42;
+x = "hello"; // fine
+```
+
+Type coercion:
+JS often converts between types automatically:
+
+```js
+"5" + 1; // "51" (string)
+"5" - 1; // 4 (number)
+```
+
+📜 typeof operator
+
+✅ You can inspect the type of a value:
+
+```js
+typeof "hello"; // "string"
+typeof 42; // "number"
+typeof undefined; // "undefined"
+typeof null; // "object" (bug)
+typeof Symbol(); // "symbol"
+typeof {}; // "object"
+typeof []; // "object"
+typeof (() => {}); // "function"
+```
+
+✅ typeof null === "object" is a long-standing quirk of JavaScript.
+
+🔷 Summary Table
+
+| Type      | Category  | Example            | Description            |
+| --------- | --------- | ------------------ | ---------------------- |
+| string    | Primitive | `"hello"`          | Textual data           |
+| number    | Primitive | `42`, `3.14`       | Numeric values         |
+| bigint    | Primitive | `123n`             | Large integers         |
+| boolean   | Primitive | `true`, `false`    | Logical values         |
+| undefined | Primitive | `undefined`        | Uninitialized variable |
+| null      | Primitive | `null`             | Explicitly no value    |
+| symbol    | Primitive | `Symbol("id")`     | Unique identifier      |
+| object    | Object    | `{ key: "value" }` | Key-value pairs        |
+| array     | Object    | `[1, 2, 3]`        | Ordered list           |
+| function  | Object    | `function() {}`    | Callable object        |
+| date      | Object    | `new Date()`       | Date and time          |
+| regexp    | Object    | `/abc/`            | Regular expression     |
+| error     | Object    | `new Error("msg")` | Error object           |
+
+✅ All primitive types are immutable and copied by value.
+✅ All objects are mutable and assigned/copied by reference.
+
 ## Naming Convention
 
 ## Object
