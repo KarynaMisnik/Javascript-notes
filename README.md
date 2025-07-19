@@ -640,6 +640,38 @@ JavaScript has two main categories of types:
 📦 Primitive types (immutable, stored by value)
 📦 Objects (mutable, stored by reference)
 
+📚 1️⃣ Primitive Types
+
+Primitives are simple, immutable values, not objects.
+✅ They are compared by value, not reference.
+✅ When you assign a primitive to another variable, you copy its value.
+List of primitives:
+
+| Type      | Example      | Description                               |
+| --------- | ------------ | ----------------------------------------- |
+| string    | "hello"      | Sequence of characters                    |
+| number    | 42, 3.14     | Numeric values (int/float)                |
+| bigint    | 123n         | Large integers                            |
+| boolean   | true, false  | Logical values                            |
+| undefined | undefined    | Default value for uninitialized variables |
+| null      | null         | Explicitly no value                       |
+| symbol    | Symbol("id") | Unique identifiers                        |
+
+> Note! Since ES6, bigint and symbol are newer additions.
+
+🔷 Notes on primitives:
+
+<code>typeof null</code> is "object" (historical bug — but <code>null</code> is still a primitive)
+
+<code>undefined</code> and <code>null</code> are falsy and loosely equal:
+
+```js
+undefined == null; // true
+undefined === null; // false
+```
+
+<code>bigint</code> is useful when integers exceed <code>Number.MAX_SAFE_INTEGER</code>
+
 ## Naming Convention
 
 ## Object
