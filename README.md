@@ -635,6 +635,11 @@ Why?
 
 JavaScript is a dynamically typed, loosely typed language, where the type of a variable is determined at runtime and can change.
 
+JavaScript has two main categories of types:
+
+📦 Primitive types (immutable, stored by value)
+📦 Objects (mutable, stored by reference)
+
 ## Naming Convention
 
 ## Object
