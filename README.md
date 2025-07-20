@@ -854,6 +854,15 @@ Nothing exists in memory for that name in scope.
 
 The engine stops execution at this point if uncaught.
 
+🔷 Side-by-side Comparison
+
+| Aspect           | undefined                          | not defined             |
+| ---------------- | ---------------------------------- | ----------------------- |
+| What is it?      | A value                            | A ReferenceError        |
+| Happens when?    | Variable declared but not assigned | Variable never declared |
+| Exists in scope? | ✅ Yes                             | ❌ No                   |
+| Type (typeof)    | "undefined"                        | N/A (error)             |
+
 ## Naming Convention
 
 ## Object
