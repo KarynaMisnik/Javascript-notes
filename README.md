@@ -722,6 +722,38 @@ JS often converts between types automatically:
 
 🧠 Is JavaScript’s type coercion a bug?
 
+No — it’s not a bug, it’s a design decision of the language.
+
+JavaScript was designed in **1995** as a lightweight scripting language for the web. At the time, its designer (**Brendan Eich**) deliberately made it loosely typed and forgiving, so even beginners could write simple scripts that “just work.”
+
+This is why JS allows things like:
+
+```js
+"5" + 1; // "51"
+"5" - 1; // 4
+false + 1; // 1
+null == undefined; // true
+```
+
+This behavior is called type coercion:
+➡️ JS implicitly converts one type into another in some operations, depending on the context (string context, numeric context, etc).
+
+It’s written into the ECMAScript specification — it’s part of the language, not a bug.
+
+🚨 Why does it feel like a “bug” sometimes?
+
+Because it often leads to surprising results and subtle bugs, e.g.:
+
+```js
+[] + {}; // "[object Object]"
+{
+}
++[]; // 0
+NaN == NaN; // false
+```
+
+Many developers consider it a design flaw in hindsight, but it was intended to make the language forgiving and flexible. However, this flexibility comes at the cost of predictability and safety.
+
 📜 typeof operator
 
 ✅ You can inspect the type of a value:
