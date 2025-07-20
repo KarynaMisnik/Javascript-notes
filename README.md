@@ -36,13 +36,7 @@ During my study path, I used several sources of knowledge, including online tuto
 * [Temporal Dead Zone](#temporal-dead-zone)
 * [Types of JavaScript Errors](#types-of-javaScript-errors)
 * [Data Types](#data-types)
-  - [string](#string)
-  - [undefined](#undefined)
-  - [number](#number)
-  - [bigint](#bigint)
-  - [boolean](#boolean)
-  - [null](#null)
-  - [symbol](#symbol)
+  - [Type Coercion](#type-coercion)
 * [Naming Convention](#naming-convention)
 * [Object](#object)
 * [Basics of JavaScript, Practical Examples](#basics-of-javascript-practical-examples)
@@ -723,6 +717,10 @@ JS often converts between types automatically:
 "5" + 1; // "51" (string)
 "5" - 1; // 4 (number)
 ```
+
+#### Type Coercion
+
+🧠 Is JavaScript’s type coercion a bug?
 
 📜 typeof operator
 
