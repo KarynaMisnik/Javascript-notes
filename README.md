@@ -37,6 +37,7 @@ During my study path, I used several sources of knowledge, including online tuto
 * [Types of JavaScript Errors](#types-of-javaScript-errors)
 * [Data Types](#data-types)
   - [Type Coercion](#type-coercion)
+  - [undefined vs. not defined](#undefined-vs-not-defined)
 * [Naming Convention](#naming-convention)
 * [Object](#object)
 * [Basics of JavaScript, Practical Examples](#basics-of-javascript-practical-examples)
@@ -791,6 +792,10 @@ typeof (() => {}); // "function"
 
 ✅ All primitive types are immutable and copied by value.
 ✅ All objects are mutable and assigned/copied by reference.
+
+#### undefined vs. not defined
+
+These are two very different situations in JavaScript — though at first glance they seem similar.
 
 ## Naming Convention
 
