@@ -830,6 +830,30 @@ It’s the default value of uninitialized declared variables.
 
 It exists in memory because the variable is declared.
 
+🚨 2️⃣ What is **“not defined”**?
+
+✅ “Not defined” is not a value — it’s an error.
+✅ It means: “this variable does not exist in the current scope.”
+
+In other words:
+
+The JavaScript engine looked for the variable name, but couldn’t find a binding for it in scope.
+
+```js
+console.log(b); // ❌ ReferenceError: b is not defined
+```
+
+Why?
+Because there is no variable <code>b</code> anywhere in the accessible scope chain — you never declared it.
+
+Key properties of <code>not defined</code>:
+
+This is a <code>ReferenceError</code>, thrown when accessing a name that has no binding.
+
+Nothing exists in memory for that name in scope.
+
+The engine stops execution at this point if uncaught.
+
 ## Naming Convention
 
 ## Object
