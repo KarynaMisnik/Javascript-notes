@@ -797,6 +797,39 @@ typeof (() => {}); // "function"
 
 These are two very different situations in JavaScript — though at first glance they seem similar.
 
+🧠 1️⃣ What is undefined?
+
+✅ undefined is a value.
+✅ It means: “this variable exists, but it hasn’t been assigned a value yet.”
+
+In other words:
+
+The variable has been declared in scope, but not yet initialized.
+
+```js
+let a;
+console.log(a); // 👉 undefined
+```
+
+Why?
+Because <code>a</code> was declared, but you never assigned it a value — so JavaScript automatically assigns it the default value <code>undefined</code>
+
+```js
+function foo() {}
+console.log(foo()); // 👉 undefined
+```
+
+Why?
+Because <code>foo()</code> doesn’t explicitly return anything — and by default, functions return <code>undefined</code> if no value is returned.
+
+Key properties of _undefined_:
+
+It’s a primitive value.
+
+It’s the default value of uninitialized declared variables.
+
+It exists in memory because the variable is declared.
+
 ## Naming Convention
 
 ## Object
