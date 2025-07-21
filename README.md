@@ -38,6 +38,7 @@ During my study path, I used several sources of knowledge, including online tuto
 * [Data Types](#data-types)
   - [Type Coercion](#type-coercion)
   - [undefined vs. not defined](#undefined-vs-not-defined)
+* [Fun fact: the shortest JS program](#fun-fact-the-shortest-js-program)
 * [Naming Convention](#naming-convention)
 * [Object](#object)
 * [Basics of JavaScript, Practical Examples](#basics-of-javascript-practical-examples)
@@ -862,6 +863,24 @@ The engine stops execution at this point if uncaught.
 | Happens when?    | Variable declared but not assigned | Variable never declared |
 | Exists in scope? | ✅ Yes                             | ❌ No                   |
 | Type (typeof)    | "undefined"                        | N/A (error)             |
+
+## Fun fact: the shortest JS program
+
+The shortest valid JavaScript program is simply:
+
+```js
+
+```
+
+Or even just nothing at all — an empty file is also a valid JavaScript program.
+
+🧠 Why?
+
+JavaScript syntax allows a program to consist of zero statements.
+
+An empty file is parsed and executed by the JS engine without errors.
+
+If you include just a semicolon (;), that’s an empty statement — also valid.
 
 ## Naming Convention
 
