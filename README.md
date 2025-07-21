@@ -882,6 +882,8 @@ An empty file is parsed and executed by the JS engine without errors.
 
 If you include just a semicolon (;), that’s an empty statement — also valid.
 
+When you run an empty file <code>Call Stack</code> and <code>Global execution context</code> are created.
+
 ## Naming Convention
 
 ## Object
