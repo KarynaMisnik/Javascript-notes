@@ -913,6 +913,11 @@ const userProfile = {
 Why?
 ➡️ This is the idiomatic style in JavaScript for identifiers (borrowed from Java).
 
+🔷 2️⃣ PascalCase (UpperCamelCase)
+
+✅ Every word capitalized, including the first.
+✅ Commonly used for:
+
 ## Object
 
 ## Functions
