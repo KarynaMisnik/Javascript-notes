@@ -886,6 +886,33 @@ When you run an empty file <code>Call Stack</code> and <code>Global execution co
 
 ## Naming Convention
 
+A naming convention is a set of agreed-upon rules for how to name variables, functions, classes, constants, etc.
+JavaScript itself doesn’t enforce any naming rules beyond what’s valid syntax — but following conventions makes your code readable & predictable for others (and yourself).
+
+🔷 1️⃣ camelCase
+
+✅ Most common convention in JS.
+✅ First word lowercase, subsequent words capitalized.
+✅ Used for:
+
+Variables
+
+Function names
+
+Object properties
+
+```js
+let userName = "Alice";
+function calculateArea(radius) {}
+const userProfile = {
+  firstName: "Alice",
+  lastName: "Smith",
+};
+```
+
+Why?
+➡️ This is the idiomatic style in JavaScript for identifiers (borrowed from Java).
+
 ## Object
 
 ## Functions
