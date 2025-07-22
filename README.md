@@ -918,6 +918,12 @@ Why?
 ✅ Every word capitalized, including the first.
 ✅ Commonly used for:
 
+Constructor functions
+
+Classes
+
+React components
+
 ## Object
 
 ## Functions
