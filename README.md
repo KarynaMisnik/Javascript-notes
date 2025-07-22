@@ -935,6 +935,11 @@ const MyComponent = () => {};
 Why?
 ➡️ Distinguishes classes/types from regular variables/functions.
 
+🔷 3️⃣ UPPER_CASE (SNAKE_CASE)
+
+✅ All uppercase letters, with underscores between words.
+✅ Used for:
+
 ## Object
 
 ## Functions
