@@ -932,6 +932,9 @@ function User(name) {
 const MyComponent = () => {};
 ```
 
+Why?
+➡️ Distinguishes classes/types from regular variables/functions.
+
 ## Object
 
 ## Functions
