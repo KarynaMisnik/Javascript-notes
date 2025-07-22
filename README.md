@@ -924,6 +924,14 @@ Classes
 
 React components
 
+```js
+class UserProfile {}
+function User(name) {
+  this.name = name;
+}
+const MyComponent = () => {};
+```
+
 ## Object
 
 ## Functions
