@@ -971,6 +971,23 @@ main - header.css;
 
 🌟 Other good practices
 
+✅ Be descriptive but concise:
+
+```js
+let a = 5; // ❌ Bad
+let userAge = 5; // ✅ Good
+```
+
+✅ Avoid reserved words:
+
+```js
+let class = 10; // ❌ SyntaxError
+```
+
+✅ Use meaningful names instead of one-letter variables (unless in small scopes like loops).
+
+✅ Boolean variables often start with <code>is</code>, <code>has</code>, <code>can</code>, etc.:
+
 ## Object
 
 ## Functions
