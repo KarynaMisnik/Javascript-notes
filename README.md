@@ -949,6 +949,15 @@ const MAX_RETRIES = 5;
 const API_KEY = "abc123";
 ```
 
+Why?
+➡️ Makes it obvious that these are fixed “constants” — a long tradition from C/C++.
+
+🔷 4️⃣ kebab-case
+
+✅ Lowercase with hyphens between words.
+✅ ⚠️ Not valid for variable names in JavaScript, because - is a subtraction operator.
+✅ Common in:
+
 ## Object
 
 ## Functions
