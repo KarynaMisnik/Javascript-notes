@@ -958,6 +958,19 @@ Why?
 ✅ ⚠️ Not valid for variable names in JavaScript, because - is a subtraction operator.
 ✅ Common in:
 
+File names
+
+CSS class names
+
+Example:
+
+```js
+user - profile.js;
+main - header.css;
+```
+
+🌟 Other good practices
+
 ## Object
 
 ## Functions
