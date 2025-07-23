@@ -944,6 +944,11 @@ Constants (that don’t change)
 
 Enum-like values
 
+```js
+const MAX_RETRIES = 5;
+const API_KEY = "abc123";
+```
+
 ## Object
 
 ## Functions
