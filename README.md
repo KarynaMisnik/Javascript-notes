@@ -940,6 +940,10 @@ Why?
 ✅ All uppercase letters, with underscores between words.
 ✅ Used for:
 
+Constants (that don’t change)
+
+Enum-like values
+
 ## Object
 
 ## Functions
