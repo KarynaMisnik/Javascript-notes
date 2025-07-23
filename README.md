@@ -988,6 +988,13 @@ let class = 10; // ❌ SyntaxError
 
 ✅ Boolean variables often start with <code>is</code>, <code>has</code>, <code>can</code>, etc.:
 
+```js
+let isActive = true;
+let hasPermission = false;
+```
+
+✅ Don’t mix conventions in the same project.
+
 ## Object
 
 ## Functions
