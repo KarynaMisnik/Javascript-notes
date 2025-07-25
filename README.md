@@ -29,6 +29,7 @@ During my study path, I used several sources of knowledge, including online tuto
 * [JS Definition](#js-definition)
 * [Javascript Versions](#javascript-versions)
 * [How to run JavaScript](#how-to-run-javascript)
+  - [How Asynchronous function runs in JS](#how-asynchronous-function-runs-in-JS)
 * [Call Stack](#call-stack)
 * [Values and Variables](#values-and-variables)
 * [Why not var](#why-not-var)
@@ -213,6 +214,13 @@ When <code>square()</code> returns → FEC is popped.
 Then next <code>square()</code> call happens → another FEC is pushed & popped.
 
 At the end, only GEC remains in the stack.
+
+#### How Asynchronous function runs in JS
+
+<ins>The Global Execution Context</ins> runs synchronously — even with async functions!
+
+What actually happens is:
+JavaScript offloads async tasks to the environment (browser or Node.js), and lets them finish in the background — using <code>callbacks</code>, <code>Promises</code>, and the <code>event loop</code> to run the result later, after the current execution stack is clear.
 
 ## Call Stack
 
