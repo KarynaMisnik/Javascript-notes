@@ -259,6 +259,14 @@ When fetch completes, the <code>.then()</code> callback is queued in the microta
 
 6. "2" is printed
 
+✅ Output:
+
+```js
+1;
+3;
+2;
+```
+
 ## Call Stack
 
 🔷 What is the Call Stack?
