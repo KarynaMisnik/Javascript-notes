@@ -222,6 +222,23 @@ At the end, only GEC remains in the stack.
 What actually happens is:
 JavaScript offloads async tasks to the environment (browser or Node.js), and lets them finish in the background — using <code>callbacks</code>, <code>Promises</code>, and the <code>event loop</code> to run the result later, after the current execution stack is clear.
 
+🔍 What Happens with async/await or fetch?
+
+Let’s use an example:
+
+```js
+console.log("1");
+fetch("https://api.example.com/data").then(() => console.log("2"));
+console.log("3");
+```
+
+🔧 Execution Context Breakdown
+Phase 1: Global Memory Creation Phase
+
+<code>console</code>, <code>fetch</code>, etc. are stored as references.
+
+No function has run yet.
+
 ## Call Stack
 
 🔷 What is the Call Stack?
