@@ -241,15 +241,23 @@ No function has run yet.
 
 Phase 2: Global Code Execution Phase (line-by-line)
 
-<code>console.log("1")</code> → prints <code>1</code>
+1. <code>console.log("1")</code> → prints <code>1</code>
 
-<code>fetch(...)</code>:
+2. <code>fetch(...)</code>:
 
-fetch is passed to the Web API environment (in the browser)
+<code>fetch</code> is passed to the Web API environment (in the browser)
 
 JS continues immediately — doesn’t wait!
 
 When fetch completes, the <code>.then()</code> callback is queued in the microtask queue
+
+3. <code>console.log("3")</code> → prints <code>3</code>
+
+4. The Call Stack is now empty
+
+5. Event loop sees a microtask (<code>.then(...)</code>) waiting → moves it to the Call Stack
+
+6. "2" is printed
 
 ## Call Stack
 
