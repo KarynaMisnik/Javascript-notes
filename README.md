@@ -239,6 +239,18 @@ Phase 1: Global Memory Creation Phase
 
 No function has run yet.
 
+Phase 2: Global Code Execution Phase (line-by-line)
+
+<code>console.log("1")</code> → prints <code>1</code>
+
+<code>fetch(...)</code>:
+
+fetch is passed to the Web API environment (in the browser)
+
+JS continues immediately — doesn’t wait!
+
+When fetch completes, the <code>.then()</code> callback is queued in the microtask queue
+
 ## Call Stack
 
 🔷 What is the Call Stack?
