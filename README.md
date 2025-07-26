@@ -267,6 +267,19 @@ When fetch completes, the <code>.then()</code> callback is queued in the microta
 2;
 ```
 
+🔬 Internals of <code>async/await</code>
+
+```js
+async function getData() {
+  console.log("A");
+  await fetch(...); // suspends here
+  console.log("B");
+}
+
+getData();
+console.log("C");
+```
+
 ## Call Stack
 
 🔷 What is the Call Stack?
