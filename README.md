@@ -280,6 +280,14 @@ getData();
 console.log("C");
 ```
 
+What happens:
+
+<code>getData()</code> enters the call stack, prints <code>"A"</code>, and hits <code>await fetch(...)</code>.
+
+JavaScript suspends <code>getData</code> and exits it — doesn’t block.
+
+Fetch runs in the Web API environment.
+
 ## Call Stack
 
 🔷 What is the Call Stack?
