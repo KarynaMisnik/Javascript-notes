@@ -302,6 +302,10 @@ C;
 B;
 ```
 
+🔁 Summary:
+
+Asynchronous functions don't skip the execution context model — they just pause parts of code, hand off tasks to the browser environment, and use the event loop to run the results later, without blocking the synchronous execution.
+
 ## Call Stack
 
 🔷 What is the Call Stack?
