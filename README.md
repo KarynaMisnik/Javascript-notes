@@ -288,6 +288,12 @@ JavaScript suspends <code>getData</code> and exits it — doesn’t block.
 
 Fetch runs in the Web API environment.
 
+<code>"C"</code> is printed (main thread continues).
+
+Later, fetch resolves → its continuation (code after await) is placed in the microtask queue.
+
+<code>"B"</code> is printed when the task is resumed.
+
 ## Call Stack
 
 🔷 What is the Call Stack?
