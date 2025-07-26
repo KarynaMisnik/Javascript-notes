@@ -294,6 +294,14 @@ Later, fetch resolves → its continuation (code after await) is placed in the m
 
 <code>"B"</code> is printed when the task is resumed.
 
+✅ Output:
+
+```js
+A;
+C;
+B;
+```
+
 ## Call Stack
 
 🔷 What is the Call Stack?
