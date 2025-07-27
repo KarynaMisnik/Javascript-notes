@@ -1124,6 +1124,19 @@ Lexical Environments are created:
 <li>When <code>eval()</code> is used (rare, creates its own LE)</li>
 </ul>
 
+📦 Types of Lexical Environments
+
+1️⃣ Global Lexical Environment
+
+Created when your program runs.
+
+```js
+let x = 10;
+function greet() {
+  console.log("Hello");
+}
+```
+
 ## Object
 
 ## Functions
