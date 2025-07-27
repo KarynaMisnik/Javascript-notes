@@ -1137,6 +1137,18 @@ function greet() {
 }
 ```
 
+LE looks like:
+
+```js
+GlobalLexicalEnvironment = {
+  environmentRecord: {
+    x: 10,
+    greet: function
+  },
+  outer: null
+}
+```
+
 ## Object
 
 ## Functions
