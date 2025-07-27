@@ -1099,6 +1099,20 @@ A **Lexical Environment** (LE) is an internal JavaScript structure (a low-level 
 
 Every time JavaScript executes a function, block, or script, it creates a new Lexical Environment.
 
+🔍 Structure of a Lexical Environment
+
+Think of each Lexical Environment as a box:
+
+```js
+LexicalEnvironment = {
+  environmentRecord: { // where variables live
+    a: 10,
+    b: function() {},
+  },
+  outer: [reference to outer environment]
+}
+```
+
 ## Object
 
 ## Functions
