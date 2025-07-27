@@ -41,6 +41,7 @@ During my study path, I used several sources of knowledge, including online tuto
   - [undefined vs. not defined](#undefined-vs-not-defined)
 * [Fun fact: the shortest JS program](#fun-fact-the-shortest-js-program)
 * [Naming Convention](#naming-convention)
+* [Lexical Environment](#lexical-environment)
 * [Object](#object)
 * [Basics of JavaScript, Practical Examples](#basics-of-javascript-practical-examples)
 
@@ -1086,6 +1087,17 @@ let hasPermission = false;
 ```
 
 ✅ Don’t mix conventions in the same project.
+
+## Lexical Environment
+
+A **Lexical Environment** (LE) is an internal JavaScript structure (a low-level concept in the JS engine) that stores:
+
+<ul>
+<li>Variable bindings (name → value pairs)</li>
+<li>A reference to its outer lexical environment (used to form the scope chain)</li>
+</ul>
+
+Every time JavaScript executes a function, block, or script, it creates a new Lexical Environment.
 
 ## Object
 
