@@ -1113,6 +1113,17 @@ LexicalEnvironment = {
 }
 ```
 
+🔁 When and Where is it Created?
+
+Lexical Environments are created:
+
+<ul>
+<li>When your script starts (→ Global LE)</li>
+<li>When a function is invoked (→ Function LE)</li>
+<li>When a block is entered (→ Block LE for <code>let / const</code>)</li>
+<li>When <code>eval()</code> is used (rare, creates its own LE)</li>
+</ul>
+
 ## Object
 
 ## Functions
