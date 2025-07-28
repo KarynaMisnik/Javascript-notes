@@ -1149,6 +1149,21 @@ GlobalLexicalEnvironment = {
 }
 ```
 
+2️⃣ Function Lexical Environment
+
+Each time a function is called, a new LE is created for that call.
+
+```js
+function outer() {
+  let a = 1;
+  function inner() {
+    let b = 2;
+    console.log(a + b);
+  }
+  inner();
+}
+```
+
 ## Object
 
 ## Functions
