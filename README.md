@@ -1187,6 +1187,14 @@ A new block LE is created for the <code>{...}</code>
 
 After the block finishes, that environment is destroyed
 
+🔗 How It Helps: Scope & Closures
+
+Because each environment has a reference to its outer one:
+
+JS looks up variables through these nested environments
+
+That lookup chain = the scope chain
+
 ## Object
 
 ## Functions
