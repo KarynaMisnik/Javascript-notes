@@ -1164,6 +1164,14 @@ function outer() {
 }
 ```
 
+Here’s what happens:
+
+<code>outer()</code> creates a Lexical Environment with <code>a</code>: <code>1</code> and reference to Global
+
+<code>inner()</code> creates another LE with <code>b</code>: <code>2</code> and reference to outer’s LE
+
+So <code>inner()</code> can access a because of the outer reference.
+
 ## Object
 
 ## Functions
