@@ -1172,6 +1172,21 @@ Here’s what happens:
 
 So <code>inner()</code> can access a because of the outer reference.
 
+3️⃣ Block Lexical Environment
+
+Created for each block <code>({ ... })</code> when using <code>let</code> or <code>const</code>
+
+```js
+{
+  let x = 5;
+  const y = 10;
+}
+```
+
+A new block LE is created for the <code>{...}</code>
+
+After the block finishes, that environment is destroyed
+
 ## Object
 
 ## Functions
