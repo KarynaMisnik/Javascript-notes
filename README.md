@@ -1195,6 +1195,24 @@ JS looks up variables through these nested environments
 
 That lookup chain = the scope chain
 
+✅ Closures are functions that "remember" the lexical environment they were created in — even after the outer function has returned.
+
+Example:
+
+```js
+function counter() {
+  let count = 0;
+  return function () {
+    count++;
+    return count;
+  };
+}
+
+const inc = counter();
+console.log(inc()); // 1
+console.log(inc()); // 2
+```
+
 ## Object
 
 ## Functions
