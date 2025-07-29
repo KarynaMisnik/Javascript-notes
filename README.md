@@ -1215,6 +1215,19 @@ console.log(inc()); // 2
 
 Even though <code>counter()</code> has finished, the inner function still accesses count — because its Lexical Environment is preserved!
 
+🗂 Summary
+
+| Concept              | Description                                                                                 |
+| -------------------- | ------------------------------------------------------------------------------------------- |
+| Lexical Environment  | Internal structure storing variable bindings and reference to outer environment (scope).    |
+| Environment Record   | Object holding variable/function bindings for the current scope.                            |
+| Outer Environment    | Reference to the parent (enclosing) lexical environment, forming the scope chain.           |
+| Global Environment   | Created when the script starts; contains global variables and functions.                    |
+| Function Environment | Created each time a function is invoked; contains local variables and arguments.            |
+| Block Environment    | Created for each block (`{}`) with `let`/`const` declarations; destroyed after block ends.  |
+| Scope Chain          | Chain of lexical environments used for variable lookup.                                     |
+| Closure              | Function that retains access to its lexical environment even after the outer function ends. |
+
 ## Object
 
 ## Functions
