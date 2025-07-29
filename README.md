@@ -1228,6 +1228,9 @@ Even though <code>counter()</code> has finished, the inner function still access
 | Scope Chain          | Chain of lexical environments used for variable lookup.                                     |
 | Closure              | Function that retains access to its lexical environment even after the outer function ends. |
 
+> A Lexical Environment is the hidden structure behind variable scope in JavaScript.
+> It tracks what variables are available at any point in the code, and where to find them.
+
 ## Object
 
 ## Functions
