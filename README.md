@@ -1213,6 +1213,8 @@ console.log(inc()); // 1
 console.log(inc()); // 2
 ```
 
+Even though <code>counter()</code> has finished, the inner function still accesses count — because its Lexical Environment is preserved!
+
 ## Object
 
 ## Functions
