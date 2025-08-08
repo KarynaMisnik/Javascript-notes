@@ -42,6 +42,7 @@ During my study path, I used several sources of knowledge, including online tuto
 * [Fun fact: the shortest JS program](#fun-fact-the-shortest-js-program)
 * [Naming Convention](#naming-convention)
 * [Lexical Environment](#lexical-environment)
+* [Scope Chain](#scope-chain)
 * [Object](#object)
 * [Basics of JavaScript, Practical Examples](#basics-of-javascript-practical-examples)
 
@@ -1230,6 +1231,27 @@ Even though <code>counter()</code> has finished, the inner function still access
 
 > A Lexical Environment is the hidden structure behind variable scope in JavaScript.
 > It tracks what variables are available at any point in the code, and where to find them.
+
+## Scope Chain
+
+❓ What is the Scope Chain?
+
+The Scope Chain is the process JavaScript uses to **find the value of a variable**.
+It’s literally <ins>a chain of references</ins> to Lexical Environments.
+
+When your code tries to access a variable, the engine:
+
+Looks in the current Lexical Environment (where the code is running).
+
+If not found, follows the outer reference to the next outer environment.
+
+Repeats until:
+
+The variable is found, or
+
+It reaches the Global Lexical Environment (top of the chain).
+
+If it’s not there → <code>ReferenceError</code>.
 
 ## Object
 
