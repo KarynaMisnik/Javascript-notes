@@ -1272,6 +1272,16 @@ function outer() {
 outer();
 ```
 
+Step-by-step resolution for <code>console.log(x, y, z)</code>:
+
+Look in <code>inner</code> LE → finds <code>z = 3</code>, but no <code>x</code> or <code>y</code>
+
+Follow <code>outer</code> reference → in outer LE finds <code>y = 2</code>
+
+Keep going out → in Global LE finds <code>x = 1</code>
+
+Done — values are <code>1 2 3</code>.
+
 ## Object
 
 ## Functions
