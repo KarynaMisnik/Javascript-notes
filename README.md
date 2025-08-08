@@ -1253,6 +1253,25 @@ It reaches the Global Lexical Environment (top of the chain).
 
 If it’s not there → <code>ReferenceError</code>.
 
+**Example:**
+
+```js
+let x = 1; // Global
+
+function outer() {
+  let y = 2;
+
+  function inner() {
+    let z = 3;
+    console.log(x, y, z);
+  }
+
+  inner();
+}
+
+outer();
+```
+
 ## Object
 
 ## Functions
