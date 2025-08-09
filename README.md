@@ -1297,6 +1297,20 @@ test(); // ReferenceError
 
 ✔️ Throws ReferenceError: a is not defined
 
+**Key Points**
+
+Scope Chain is static (lexical): based on where functions are written, not how they are called.
+
+Each function/block has its own Lexical Environment, connected to its parent.
+
+Variable lookup always starts local and climbs up.
+
+**Real-world Use**
+
+Closures and nested functions rely on this mechanism:
+
+Functions “remember” variables because the Scope Chain preserves the path to where they were defined.
+
 ## Object
 
 ## Functions
