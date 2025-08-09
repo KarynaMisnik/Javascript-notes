@@ -1369,6 +1369,26 @@ console.log(counter.increment()); // 2
 console.log(counter.decrement()); // 1
 ```
 
+<code>count</code> is not accessible directly — only via the returned methods.
+
+This simulates private variables.
+
+b) Event Handlers
+
+```js
+function setupButton(id) {
+  let clicks = 0;
+  document.querySelector(id).addEventListener("click", () => {
+    clicks++;
+    console.log(`Button clicked ${clicks} times`);
+  });
+}
+
+setupButton("#myBtn");
+```
+
+Each button can keep its own independent counter — thanks to closure.
+
 ## Object
 
 ## Functions
