@@ -1343,6 +1343,32 @@ But <code>inner</code> is returned, and it closes over (captures) the variable <
 
 Calling <code>fn()</code> later still has access to secret.
 
+Closures are not just a concept — they are everywhere in real JS code.
+
+a) Data Privacy / Encapsulation
+
+```js
+function createCounter() {
+  let count = 0; // private
+
+  return {
+    increment() {
+      count++;
+      return count;
+    },
+    decrement() {
+      count--;
+      return count;
+    },
+  };
+}
+
+const counter = createCounter();
+console.log(counter.increment()); // 1
+console.log(counter.increment()); // 2
+console.log(counter.decrement()); // 1
+```
+
 ## Object
 
 ## Functions
