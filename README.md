@@ -43,6 +43,7 @@ During my study path, I used several sources of knowledge, including online tuto
 * [Naming Convention](#naming-convention)
 * [Lexical Environment](#lexical-environment)
 * [Scope Chain](#scope-chain)
+* [Closure](#closure)
 * [Object](#object)
 * [Basics of JavaScript, Practical Examples](#basics-of-javascript-practical-examples)
 
@@ -1310,6 +1311,12 @@ Variable lookup always starts local and climbs up.
 Closures and nested functions rely on this mechanism:
 
 Functions “remember” variables because the Scope Chain preserves the path to where they were defined.
+
+❓ Does the Scope Chain make code more error-prone by letting us access variables declared “in the wrong place”?
+
+The short answer: It <ins>can</ins> — **if misused**. But the problem isn’t the Scope Chain itself; it’s how variables are declared and managed.
+
+## Closure
 
 ## Object
 
