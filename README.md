@@ -1318,6 +1318,31 @@ The short answer: It <ins>can</ins> — **if misused**. But the problem isn’t 
 
 ## Closure
 
+**A closure** is a function that "remembers" the variables from the scope where it was created, even after that scope has finished executing.
+
+This is possible because the inner function keeps a reference to the Lexical Environment where it was defined.
+
+```js
+function outer() {
+  let secret = "shh...";
+
+  function inner() {
+    console.log(secret);
+  }
+
+  return inner;
+}
+
+const fn = outer(); // outer() finishes here
+fn(); // logs: shh...
+```
+
+When <code>outer()</code> finishes, its Lexical Environment should normally disappear.
+
+But <code>inner</code> is returned, and it closes over (captures) the variable <code>secret</code>.
+
+Calling <code>fn()</code> later still has access to secret.
+
 ## Object
 
 ## Functions
