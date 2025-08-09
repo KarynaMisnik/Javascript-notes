@@ -1282,6 +1282,21 @@ Keep going out → in Global LE finds <code>x = 1</code>
 
 Done — values are <code>1 2 3</code>.
 
+**What Happens if Variable Isn’t Found?**
+
+```js
+function test() {
+  console.log(a);
+}
+test(); // ReferenceError
+```
+
+✔️ JS checks test LE → not found
+
+✔️ Checks Global LE → not found
+
+✔️ Throws ReferenceError: a is not defined
+
 ## Object
 
 ## Functions
