@@ -1389,6 +1389,21 @@ setupButton("#myBtn");
 
 Each button can keep its own independent counter — thanks to closure.
 
+c) Function Factories
+
+```js
+function multiplier(factor) {
+  return function (num) {
+    return num * factor;
+  };
+}
+
+const double = multiplier(2);
+console.log(double(5)); // 10
+```
+
+Closures allow you to create customized functions dynamically.
+
 ## Object
 
 ## Functions
