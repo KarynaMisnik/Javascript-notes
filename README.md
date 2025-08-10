@@ -1404,6 +1404,24 @@ console.log(double(5)); // 10
 
 Closures allow you to create customized functions dynamically.
 
+❓ Why Closures Keep Memory Alive
+
+When a function creates a closure, the JS engine does not garbage collect that Lexical Environment.
+
+It keeps it alive in memory as long as any inner function still references it.
+
+```js
+function remember() {
+  let data = new Array(1000000).fill("big"); // big memory
+  return () => console.log(data.length);
+}
+
+const fn = remember();
+// memory stays allocated because fn() still references `data`
+```
+
+When you remove all references (<code>fn = null</code>), then the Lexical Environment can finally be garbage collected.
+
 ## Object
 
 ## Functions
