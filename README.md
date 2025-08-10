@@ -1422,6 +1422,20 @@ const fn = remember();
 
 When you remove all references (<code>fn = null</code>), then the Lexical Environment can finally be garbage collected.
 
+🗝️ Key Takeaways
+
+Closure = function + preserved lexical environment.
+
+It allows:
+
+📌 Data hiding (private variables)
+
+📌 Custom behavior per function instance
+
+📌 Asynchronous callbacks to access "old" variables
+
+📌 It can cause memory leaks if you keep unused closures around.
+
 ## Object
 
 ## Functions
