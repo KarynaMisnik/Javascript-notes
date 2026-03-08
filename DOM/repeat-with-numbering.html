@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repeat with Numbering</title>
+</head>
+<body>
+    <input id="count" type="number" placeholder="How many">
+    <input id="text" type="text" placeholder="Text">
+    <button id="btn">Generate</button>
+    <p id="out"></p>
+
+    <script>
+        const count = document.getElementById("count");
+	const text = document.getElementById("text");
+	const btn = document.getElementById("btn");
+	const out = document.getElementById("out");
+
+	btn.addEventListener("click", repeat);
+
+	function repeat(){
+	const countTimes = Number(count.value);
+	const countText = text.value;
+
+	if((count.value === "") || (text.value === "")){
+	out.innerHTML = "Inputs can't be empty";
+	return;
+	}
+
+    out.innerHTML = "";
+
+	for(let i = 0; i<countTimes; i++){
+	out.innerHTML += (i + 1) + ". " + countText + "<br>";
+    }
+	}
+    </script>
+    
+</body>
+</html>
