@@ -9,21 +9,31 @@
 <input id="textInput">
 <button id="addBtn">Add</button>
 <p id="output"></p>
+<p id="arrayResult"></p>
 
     <script>
 
 const addBtn = document.getElementById("addBtn");
 const output = document.getElementById("output");
+const arrayResult = document.getElementById("arrayResult");
+
+// declare array once, outside the function
+const items = [];
 
 addBtn.addEventListener("click", showResult);
 
 function showResult(){
-const textInput = document.getElementById("textInput").value;
+  const textInput = document.getElementById("textInput").value;
 
-output.innerHTML += textInput + "<br>";
+  // update p with new line
+  output.innerHTML += textInput + "<br>";
 
+  // store input in array
+  items.push(textInput);
+
+  // show array content
+  arrayResult.innerHTML = "Array: <br>" + items.join("<br>");
 }
-
 </script>
 </body>
 </html>
