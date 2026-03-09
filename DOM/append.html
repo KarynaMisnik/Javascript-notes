@@ -48,8 +48,36 @@ at the beginning. By placing it inside the function, we ensure that we get the c
 of the input each time the button is clicked.
 We read <code>.value</code> inside the function so we get the current input value when the user clicks the button.
 <ul>
-    <li></li>
+    <li>What happens if we use <code>showResult()</code> instead of <code>showResult</code>?</li>
 </ul>
+<p><code>addBtn.addEventListener("click", showResult);</code>
+<code>showResult</code>passes the function so it runs when the event occurs.
+THIS IS WRONG: <code>addBtn.addEventListener("click", showResult());</code>
+<code>showResult()</code> calls the function immediately; Whatever it returns becomes the event handler (usually undefined);
+So the function runs once when the page loads, not on click.
+</p>
+
+<ul>
+    <li>Why does <code>items</code> need to be outside the function?</li>
+</ul>
+
+<p><code>function showResult(){
+const items = [];
+}</code>
+Variables inside a function are recreated each time the function runs.
+Declaring the array outside lets it store values between function calls.
+</p>
+
+<ul>
+    <li>Why does <code>&lt;br&gt;</code> work but <code>\n</code> doesn't?</li>
+</ul>
+<p>HTML ignores normal whitespace
+ <code>&lt;br&gt;</code> works because it is an HTML line-break element.
+To make <code>\n</code> work you must use CSS:
+<code>#output {
+white-space: pre-wrap;
+}</code>
+</p>
 
 <!-- CSS -->
  <style>
