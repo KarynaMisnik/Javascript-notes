@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append Results</title>
+</head>
+<body>
+<input id="textInput">
+<button id="addBtn">Add</button>
+<p id="output"></p>
+
+    <script>
+
+const addBtn = document.getElementById("addBtn");
+const output = document.getElementById("output");
+
+addBtn.addEventListener("click", showResult);
+
+function showResult(){
+const textInput = document.getElementById("textInput").value;
+
+output.innerHTML += textInput + "<br>";
+
+}
+
+</script>
+</body>
+</html>
