@@ -11,6 +11,74 @@
 <p id="output"></p>
 <p id="arrayResult"></p>
 
+<h2>Code Analysis and Explanation</h2>
+<pre><code class="language-js">
+  1 <span class="span-1">const</span> addBtn = document.getElementById("addBtn");
+  2 <span class="span-1">const</span> output = document.getElementById("output");
+  3 <span class="span-1">const</span> arrayResult = document.getElementById("arrayResult");
+  4  
+  5 <span class="span-3">// declare array once, outside the function</span>
+  6 <span class="span-1">const</span>const items = [];
+  7  
+  8  addBtn.addEventListener(<span class="span-2">"click"</span>, showResult);
+  9  
+ 10  <span class="span-1">function</span> showResult(){
+ 11    <span class="span-1">const</span> textInput = document.getElementById(<span class="span-2">"textInput"</span>).value;
+ 12   
+ 13   <span class="span-3">// update p with new line</span>
+ 14   output.innerHTML += textInput + <span class="span-2">&lt;br&gt;</span>;
+ 15   
+ 16   <span class="span-3">// store input in array</span>
+ 17   items.push(textInput);
+ 18   
+ 19   <span class="span-3">// show array content</span>
+ 20   arrayResult.innerHTML = "Array: <span class="span-2">&lt;br&gt;</span>" + items.join(<span class="span-2">&lt;br&gt;</span>);
+ 21   }
+</pre></code>
+
+<ul>
+<li>Why do we read <code>.value</code>inside the function, not outside?</li>
+</ul>
+<p><code>const textInput = document.getElementById("textInput").value;</code></p>
+This runs once when the script loads. So if the line will be outise of the function,
+it <ins>will never be updated</ins>. For example, if the user types "orange" in the input, 
+it will print "orange" in the output. But when the user changes the input to "apple" and 
+clicks the button again, it will print "orange" again, because the value was read only once 
+at the beginning. By placing it inside the function, we ensure that we get the current value 
+of the input each time the button is clicked.
+We read <code>.value</code> inside the function so we get the current input value when the user clicks the button.
+<ul>
+    <li></li>
+</ul>
+
+<!-- CSS -->
+ <style>
+.span-1{
+    color: rgb(105, 105, 252);
+}
+
+.span-2{
+    color: rgb(252, 105, 105);
+}
+
+.span-3{
+    color: rgb(105, 252, 105);
+}
+code {
+  background: #0a0a0a;
+  padding: 2px 4px;
+  border-radius: 4px;
+  color: white;
+}
+
+pre {
+  background: #0a0a0a;
+  padding: 10px;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+</style>
+
     <script>
 
 const addBtn = document.getElementById("addBtn");
