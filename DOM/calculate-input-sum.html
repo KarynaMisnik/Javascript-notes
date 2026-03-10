@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Sum</title>
+</head>
+<body>
+    <input id="num1">
+    <input id="num2">
+    <button id="btn">Calculate</button>
+    <p id="result"></p>
+
+    <script>
+     const btn = document.getElementById('btn');
+     const result = document.getElementById('result');
+
+     btn.addEventListener('click', showSum);
+
+    function showSum() {
+        const num1 = Number(document.getElementById('num1').value);
+        const num2 = Number(document.getElementById('num2').value);
+        result.textContent = num1 + num2;
+       
+    }
+
+    </script>
+</body>
+</html>
