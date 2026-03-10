@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Average Input</title>
+</head>
+<body>
+    <p class="num">10</p>
+    <p class="num">20</p>
+    <p class="num">30</p>
+    
+    <button id="avgBtn">Average</button>
+    
+    <p id="result"></p>
+    <script>
+        const avgBtn = document.getElementById("avgBtn");
+        const result = document.getElementById("result");
+
+        avgBtn.addEventListener("click", showAverage);
+
+        function showAverage(){
+            const nums = document.getElementsByClassName("num");
+               if (nums.length === 0) {
+                result.textContent = "No numbers to average.";
+                return;
+            }
+            let sum = 0;
+            for(let i=0; i<nums.length; i++){
+                sum += Number(nums[i].textContent);
+            }
+         
+            const average = sum/nums.length;
+            result.textContent = average;
+        }
+    </script>
+</body>
+</html>
