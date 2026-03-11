@@ -15,21 +15,25 @@
 
  <h2>Code Analysis and Explanation</h2>
  <pre><code>
-1 <span class="span-1">const</span>  addBtn = document.getElementById(<span class="span-2">"addBtn"</span>);
+1  <span class="span-1">const</span>  addBtn = document.getElementById(<span class="span-2">"addBtn"</span>);
 2
-3 addBtn.addEventListener(<span class="span-2">"click"</span>, createElement);
+3  addBtn.addEventListener(<span class="span-2">"click"</span>, createElement);
 4 
-5 function createElement(){
+5  <span class="span-1">function</span> createElement(){
 6
-7 <span class="span-1">const</span>  input = document.getElementById(<span class="span-2">"itemInput"</span>);
-8 <span class="span-1">const</span>  item = input.value;
+7  <span class="span-1">const</span>  input = document.getElementById(<span class="span-2">"itemInput"</span>);
+8  <span class="span-1">const</span>  item = input.value;
 9
-10 <span class="span-1">const</span>  li = document.createElement(<span class="span-2">"li"</span>);
+10  <span class="span-1">const</span>  li = document.createElement(<span class="span-2">"li"</span>);
 11
-12 li.textContent = item;
-13 document.getElementById(<span class="span-2">"list"</span>).appendChild(li);
-14 input.value = <span class="span-2">""</span>;
-15 }
+12  li.textContent = item;
+13  document.getElementById(<span class="span-2">"list"</span>).appendChild(li);
+14  li.addEventListener("click", removeItem);
+15  input.value = <span class="span-2">""</span>;
+16  }
+17  <span class="span-1">function</span> removeItem(){
+18  this.remove();
+19   }
  </code>
  </pre>   
 
@@ -46,7 +50,9 @@ but it is not yet in the DOM. <code>appendChild()</code> method only works with 
 so <code>li.textContent = item;</code> automatically creates the text node.
 > NOTE: there is other option to create text node explicitly: <code>li.appendChild(document.createTextNode(item));</code>
 Finally, we append the new <code>&lt;li&gt;</code> to the list and clear <code>input.value = <span class="span-2">""</span>;</code> the input for the next item.
-
+Additionally, we add a click event listener to the new <code>&lt;li&gt;</code> 
+that calls <code>removeItem</code> function, which removes the item from the list 
+when clicked.
 <script>
     const addBtn = document.getElementById("addBtn");
 	 
@@ -61,8 +67,13 @@ Finally, we append the new <code>&lt;li&gt;</code> to the list and clear <code>i
 	
 	li.textContent = item;
     document.getElementById("list").appendChild(li);
+    li.addEventListener("click", removeItem);
 	input.value = "";
 	} 
+
+    function removeItem(){
+        this.remove();
+    }
 
     </script>
 </body>
