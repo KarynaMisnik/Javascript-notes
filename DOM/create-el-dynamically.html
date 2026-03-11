@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Elements Dynamically</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <input id="itemInput">
+    <button id="addBtn">Add Item</button>
+    
+    <ul id="list"></ul>
+
+ <h2>Code Analysis and Explanation</h2>
+ <pre><code>
+1 <span class="span-1">const</span>  addBtn = document.getElementById(<span class="span-2">"addBtn"</span>);
+2
+3 addBtn.addEventListener(<span class="span-2">"click"</span>, createElement);
+4 
+5 function createElement(){
+6
+7 <span class="span-1">const</span>  input = document.getElementById(<span class="span-2">"itemInput"</span>);
+8 <span class="span-1">const</span>  item = input.value;
+9
+10 <span class="span-1">const</span>  li = document.createElement(<span class="span-2">"li"</span>);
+11
+12 li.textContent = item;
+13 document.getElementById(<span class="span-2">"list"</span>).appendChild(li);
+14 input.value = <span class="span-2">""</span>;
+15 }
+ </code>
+ </pre>   
+
+ First lines are pretty straightforward: <b>line 1</b> declare a const for the button;
+ <b>line 3</b> adds a click event listener, it creates a new element;
+ Then there is a function <b>createElement</b>
+ <code><span class="span-1">const</span> input = document.getElementById(<span class="span-2">"itemInput"</span>);
+</code>
+is the same as <code><span class="span-1">const</span> input = document.getElementById(<span class="span-2">"itemInput"</span>).value;</code>
+BUT: we use <code>input.value</code> later, because we need to clear the input after adding the item to the list.
+So we store the input element in a variable and then access its value when needed.
+<b>line 10</b> create a new element <code><span class="span-1">const</span> li = document.createElement(<span class="span-2">"li"</span>);</code>
+but it is not yet in the DOM. <code>appendChild()</code> method only works with DOM nodes, 
+so <code>li.textContent = item;</code> automatically creates the text node.
+> NOTE: there is other option to create text node explicitly: <code>li.appendChild(document.createTextNode(item));</code>
+Finally, we append the new <code>&lt;li&gt;</code> to the list and clear <code>input.value = <span class="span-2">""</span>;</code> the input for the next item.
+
+<script>
+    const addBtn = document.getElementById("addBtn");
+	 
+	addBtn.addEventListener("click", createElement);
+
+	function createElement(){
+	
+    const input = document.getElementById("itemInput");
+	const item = input.value;
+	
+	const li = document.createElement("li");
+	
+	li.textContent = item;
+    document.getElementById("list").appendChild(li);
+	input.value = "";
+	} 
+
+    </script>
+</body>
+</html>
