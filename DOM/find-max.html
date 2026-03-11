@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlight Max Value</title>
+</head>
+<body>
+    <p class="num">12</p>
+    <p class="num">7</p>
+    <p class="num">25</p>
+    <p class="num">18</p>
+    
+    <button id="maxBtn">Highlight Max</button>
+
+    <script>
+        const nums = document.getElementsByClassName('num');
+	const maxBtn = document.getElementById('maxBtn');
+	
+
+	maxBtn.addEventListener("click", highlightMax);
+
+	function highlightMax(){
+	let maxValue = -Infinity;
+	let maxElement = null;
+	
+	for(let i=0; i<nums.length; i++){
+	
+	const value = Number(nums[i].textContent);
+	
+	if(value > maxValue){
+	maxValue = value;
+	maxElement = nums[i];
+	}
+	}
+	maxElement.style.backgroundColor = 'yellow';
+	}
+	
+    </script>
+</body>
+</html>
