@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find String Length</title>
+</head>
+<body>
+    <input id="textInput">
+    <p id="count"></p>
+
+
+    <script>
+         const input = document.getElementById("textInput");
+         const count = document.getElementById("count");
+           
+
+            input.addEventListener("input", showResult);
+
+            function showResult(){
+                let result = input.value.length;
+                
+                count.textContent = result;
+
+
+            }
+
+    </script>
+</body>
+</html>
