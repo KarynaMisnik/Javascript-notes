@@ -12,6 +12,42 @@
 <button id="btn">Calculate</button>
 <p id="out"></p>
     
+<pre>
+    <code>
+        <span class="span-1">const</span> input = document.getElementById(<span class="span-2">"price"</span>);
+        <span class="span-1">const</span> vat = document.getElementById(<span class="span-2">"vat"</span>);
+        <span class="span-1">const</span> btn = document.getElementById(<span class="span-2">"btn"</span>);
+        <span class="span-1">const</span> out = document.getElementById(<span class="span-2">"out"</span>);
+        
+        btn.addEventListener("click", calculate);
+        
+        <span class="span-1">function</span> calculate(){
+        
+            <span class="span-3">// Check if inputs are empty</span>
+        if((input.value === "") || (vat.value === "")){
+        out.innerHTML = "Input can't be empty";
+        return;
+        }
+        
+        <span class="span-1">const</span> price = parseFloat(input.value);
+        <span class="span-1">const</span> vatValue = parseFloat(vat.value);
+        
+        <span class="span-1">const</span> total = price * (1 + vatValue/100);
+        out.innerHTML = (total.toFixed(2));
+        }
+    </code>
+</pre>
+
+<h2>Code Analysis and Explanation</h2>
+Why <code>if((input.value === "") || (vat.value === ""))</code> will give <code>NaN</code>
+instead of <code>Input can't be empty</code> when the input is empty?
+<code>input</code> and <code>vat</code> are references to DOM elements, they
+are objects and they are (objects) NEVER equal to an empty string;
+<span class="span-3">IMPORTANT: </span> even if the <code>input</code> is 
+empty on the page, the element itself exists, so this comparison is meaningless.
+How to properly check if the user left it empty: You need the property 
+that stores what the user typed: <code>input.value</code>
+and <code>vat.value</code>. 
     <script>
 	const input = document.getElementById("price");
     const vat = document.getElementById("vat");
@@ -20,9 +56,18 @@
 	
 	btn.addEventListener("click", calculate);
 
+	
+
 	function calculate(){
+
+  	 if((input.value === "") || (vat.value === "")){
+	out.innerHTML = "Input can't be empty";
+	return;
+	}
+
 	const price = parseFloat(input.value);
 	const vatValue = parseFloat(vat.value);
+	
 	const total = price * (1 + vatValue/100);
 	out.innerHTML = (total.toFixed(2));
 	}	
