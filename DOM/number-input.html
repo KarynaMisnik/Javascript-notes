@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Convert Input to Number</title>
+</head>
+<body>
+    <input id="num1" type="number">
+    <button id="btn">Show</button>
+    <p id="out"></p>
+
+    <h2>Code Analysis and Explanation</h2>
+    <pre>
+        <code>
+            <span class="span-1">const</span> num1 = document.getElementById(<span class="span-2">"num1"</span>);
+            <span class="span-1">const</span> btn = document.getElementById(<span class="span-2">"btn"</span>);
+            <span class="span-1">const</span> out = document.getElementById(<span class="span-2">"out"</span>);
+            
+            btn.addEventListener(<span class="span-2">"click"</span>, show);
+            
+            <span class="span-1">function</span> show(){
+            <span class="span-1">const</span> result = (Number(num1.value));
+            <span class="span-3">// class="span-3">const result = num1.value + 5;</span>
+            out.innerHTML = result;
+            }
+
+        </code>
+    </pre>
+    
+    <code>const num1</code>, <code>const btn</code>, and <code>const out</code> 
+    are declared to store references to DOM elements. 
+    <code>num1.value</code> is needed to convert a string to a number
+    because even though the input has a type of "number", the value retrieved 
+    from it is still a string. The number is converted inside function
+    and it happenes on click event of the button. <code>Number(num1.value)</code>
+    converts the string value. Also, the functon triggers output in paragraph element. 
+   
+    <script>
+    const num1 = document.getElementById("num1");
+	const btn = document.getElementById("btn");
+    const out = document.getElementById("out");
+	
+	btn.addEventListener("click", show);
+
+	function show(){
+	    const result = (Number(num1.value));
+        //const result = num1.value + 5;
+	    out.innerHTML = result;
+	}	
+
+    </script>
+</body>
+</html>
