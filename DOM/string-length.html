@@ -8,19 +8,22 @@
 <body>
     <input id="textInput">
     <p id="count"></p>
+    <p id="countWithoutSpace"></p>
 
 
     <script>
          const input = document.getElementById("textInput");
          const count = document.getElementById("count");
+         const countWithoutSpace = document.getElementById("countWithoutSpace");
            
 
             input.addEventListener("input", showResult);
 
             function showResult(){
                 let result = input.value.length;
-                
-                count.textContent = result;
+                let resultWithoutSpace = input.value.replace(/\s/g, "").length;
+                count.textContent = "With space: " + result;
+                countWithoutSpace.textContent = "Without space: " + resultWithoutSpace;
 
 
             }
