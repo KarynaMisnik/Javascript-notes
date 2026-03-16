@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repeat</title>
+</head>
+<body>
+    <input id="count" type="number" placeholder="How many times">
+    <input id="text" type="text" placeholder="Text">
+    <button id="btn">Repeat</button>
+    <button id="alert">Show Alert</button>
+    <p id="out"></p>
+
+    <script>
+        
+	const count = document.getElementById("count");
+	const text = document.getElementById("text");
+	const btn = document.getElementById("btn");
+	const out = document.getElementById("out");
+    const alertBtn = document.getElementById("alert");
+
+	btn.addEventListener("click", repeat);
+    alertBtn.addEventListener("click", showAlert);
+        
+   
+    function showAlert(){
+        const alertText = text.value;
+        alert(alertText);
+    }
+
+	function repeat(){
+	const numRepeat = Number(count.value);
+	const textRepeat = text.value;
+	let result = "";
+
+	for(let i = 0; i < numRepeat; i++){
+	//result += textRepeat + "<br>";
+	out.innerHTML += textRepeat + "<br>";
+	}
+	//out.innerHTML = result;
+		}
+
+    </script>
+</body>
+</html>
