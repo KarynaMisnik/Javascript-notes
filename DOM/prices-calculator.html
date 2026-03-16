@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Calculator</title>
+</head>
+<body>
+    <input class="price" type="number" placeholder="Price 1">
+    <input class="price" type="number" placeholder="Price 2">
+    <input class="price" type="number" placeholder="Price 3">
+    <input id="vat" type="number" placeholder="VAT %">
+    <button id="btn">Calculate Total</button>
+    <p id="out"></p>
+
+    <script>
+    const prices = document.querySelectorAll(".price");
+	const vat = document.getElementById("vat");
+	const btn = document.getElementById("btn");
+	const out = document.getElementById("out");
+
+	btn.addEventListener("click", showTotal);
+
+
+	function showTotal(){
+        let total = 0;
+         const allPrices = [];
+
+        if (vat.value === "") {
+            out.innerHTML = "All fields must be filled";
+            return;
+        }
+
+	const vatValue = parseFloat(vat.value);
+
+	for(let i = 0; i < prices.length; i++){
+        if(prices[i].value === ""){
+            out.innerHTML = "All fields must be filled";
+            return;
+
+        }
+
+        const value = parseFloat(prices[i].value);
+        const final = value * (1 + vatValue / 100);
+         total += final;
+         allPrices.push(final.toFixed(2));
+    }
+       
+
+   
+	out.innerHTML = "Final prices: " + allPrices.join(", ") + "<br>" + "Total: " + total.toFixed(2);
+	}
+    </script>
+</body>
+</html>
