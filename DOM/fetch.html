@@ -3,13 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
     <title>Fetching Data</title>
 </head>
 <body>
-    <p id="data"></p>
+<button id="btn">Load</button>
+<p id="out"></p>
+
+<div class="explanation">
+   
+    <pre><code style="white-space: pre;" class="language-js">
+        <span class="span-1">const</span> btn = document.getElementById(<span class="span-2">"btn"</span>);
+        <span class="span-1">const</span> out = document.getElementById(<span class="span-2">"out"</span>);
+        
+        btn.addEventListener("click", fetchNums);
+        
+        <span class="span-1">function</span> fetchNums(){
+        fetch("numbers.txt")
+        .then(res => res.text())
+        .then(data =>{
+
+        <span class="span-3">// 1. Replace commas with dots</span>
+        <span class="span-1">const</span> formatted = data.replaceAll(",", ".");
+        
+        <span class="span-3">// 2. Split into arr</span>
+        <span class="span-1">const</span> arr = data.split(",");
+        
+        <span class="span-3">3. Convert into value, calculate sum</span>
+        let total = 0;
+        
+        for(let i = 0; i &lt; arr.length; i++){ 
+        total +=Number(arr[i]); 
+    } 
+       out.innerHTML = `out.innerHTML = formatted + &lt;<br>&lt; + "Total: " + total + "Average: " + &lt;br&gt; + (total / arr.length);`;
+    }) 
+    }
+</code></pre>
+
+<h1>Code Analysis and Explanation:</h1>
+<p>
+    <code>
+    <span class="span-2">fetch</span>("numbers.txt");
+    </code>
+    is a built-in JS function(Web API). It sends a request lo load a file/URL and returns <b>Promise</b>
+</p>
+<code>
+.then(res => res.text())</code>
+<p>means:"when fetch is done, do next step"<br>
+<b>res =></b> is an arrow function, it means the same as
+<code>function(res){
+return res.text();
+}
+</code>
+<b>res.text()</b> is not yet the text, it is <b>response object</b>. It contains
+<ul>
+    <li>status(200 OK)</li>
+    <li>headers</li>
+    <li>body(file content)</li>
+</ul>
+<code>res.text()</code> <b>text()</b> is a built-in JS function of the 
+response object. It reads the body as text. And returns another Promise. 
+</p>
+</div>
 
     <script>
-   
-            </script>
+   const btn = document.getElementById("btn");
+   const out = document.getElementById("out");
+
+   btn.addEventListener("click", fetchNums);
+
+        function fetchNums(){
+            
+            fetch("numbers.txt")
+            .then(res => res.text())
+            .then(data =>{
+                const formatted = data.replaceAll(",", ".");
+
+                const arr = data.split(",");
+                let total = 0;
+
+                for(let i = 0; i<arr.length; i++){
+                    total += Number(arr[i]);
+                }
+
+                out.innerHTML = formatted + "<br>" + "Total: " + total + 
+                "<br>" + "Average: " + (total/arr.length);
+            })
+            
+        }
+
+    </script>
 </body>
 </html>
