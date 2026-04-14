@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>Task 1 - Repeater</h1>
+    <div style="display: flex; margin-top: .5rem"><label for="val1">val 1</label><br>
+    <input style="margin-left: .5rem" type="number" id="val1"></div>
+    <div style="display: flex; margin-top: .5rem"><label for="val2">val 2</label><br>
+        <input style="margin-left: .5rem" type="text" id="val2">
+    </div>
+    <button style="margin-top: .5rem" id="btnR">Repeat</button><br>
+    <p id="outT"></p>
+
+<h1>Task 2 - Popup</h1>
+<button type="button" id="popup">Show Popup</button><br>
+
+<h3>Task 3 - Word</h3>
+<div style="display: flex; margin-top: .5rem"><label for="word">Enter a word:</label><br>
+    <input style="margin-left: .5rem" type="text" id="word"><br>
+</div>
+<button type="button" id="btnL">Calculate Length</button>
+<p id="outL"></p><br>
+
+<h1>Task 4 - Average</h1><br>
+<p id="outA"></p><br>
+<p id="outAverage"></p>
+
+  </body>
+
+  <script>
+const btnR = document.getElementById("btnR");
+const outT = document.getElementById("outT");
+
+btnR.addEventListener("click", repeat);
+
+function repeat(){
+    const val1 = Number(document.getElementById("val1").value);
+    const val2 = document.getElementById('val2').value;
+
+    outT.innerHTML = '';
+
+    for(let i = 0; i<val1; i++){
+outT.innerHTML += val2 + "<br>";
+    }
+}
+
+const popup = document.getElementById("popup");
+popup.addEventListener("click", showPop);
+
+function showPop(){
+    alert("This is val2: " + " " + document.getElementById('val2').value);
+}
+
+const btnL = document.getElementById("btnL");
+const outL = document.getElementById("outL");
+
+btnL.addEventListener("click", countL);
+
+function countL(){
+    const word = document.getElementById("word").value;
+    const countWord = word.length;
+    outL.innerHTML = '';
+    outL.innerHTML += countWord;
+  
+}
+
+   getText("numbers.txt");
+
+    async function getText(file) {
+        let x = await fetch(file);
+        let y = await x.text();
+        document.getElementById("outA").innerHTML = y.replaceAll(",", ".");
+            const arr = y.split(",");
+        let total = 0;
+
+        for (let i = 0; i < arr.length; i++) {
+            total += Number(arr[i]);
+        }
+
+        const avg = total / arr.length;
+        document.getElementById("outAverage").innerHTML = "Average: "   + avg;
+    
+    }
+   
+  </script>
+
+</html>
