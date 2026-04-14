@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlight Max Value</title>
+</head>
+
+<body>
+    <h1>Task 1 - Repeater</h1><br>
+    <div style="display: flex; margin-bottom: 1rem;">
+        <label for="val1">val 1</label><br>
+        <input style="margin-left: .5rem" type="number" id="val1" name="val1"><br>
+    </div>
+    <div style="display: flex; margin-bottom: 1rem;">
+        <label for="val2">val 2</label><br>
+        <input style="margin-left: .5rem" type="text" id="val2" name="val2"><br>
+    </div>
+<button id="btnR">Repeat</button>
+<p id="outR"></p>
+
+<h1>Task 2 - Popup</h1>
+<button id="btnP">Popup</button><br>
+
+<h1>Task 3 - Word Vowels</h1><br>
+<div style="display: flex; margin-bottom: 1rem;">
+    <label for="word">word</label><br>
+    <input style="margin-left: .5rem" type="text" id="word" name="word"><br>
+</div>
+
+<button id="btnV">Analyze</button><br>
+<p id="outV"></p><br>
+
+<h1>Task 4 - Numbers</h1>
+<p id="outN"></p><br>
+<p id="sumN"></p>
+
+<h1>Task 5 - Hidden</h1>
+<p id="mysterytext"></p>
+
+
+    </body>
+
+    <script>
+        const btnR = document.getElementById("btnR");
+        const outR = document.getElementById("outR");
+
+        btnR.addEventListener("click", repeat);
+
+        function repeat(){
+            const val1 = Number(document.getElementById("val1").value);
+            const val2 = document.getElementById("val2").value;
+
+            outR.innerHTML = '';
+            for(let i=0; i<val1; i++){
+                if(i%3===0){
+                    outR.innerHTML += val2 + "!<br>";
+                }else{ 
+                    outR.innerHTML += val2 + "<br>";
+                }
+            }
+        }
+
+        const btnP = document.getElementById("btnP");
+
+        btnP.addEventListener("click", showPop);
+        
+
+        function showPop(){
+       
+            const val2 = document.getElementById("val2").value;
+                if(val2.length>5){
+                    alert("Long word " + val2);
+
+                }else{
+                    alert("val2 is short word " + val2);
+                }
+            
+        }
+
+        const btnV = document.getElementById("btnV");
+        const outV = document.getElementById("outV");
+
+        btnV.addEventListener("click", calculateVowels);
+
+        function calculateVowels(){
+            const word = document.getElementById("word").value;
+         
+            let vowelCount = 0;
+            const vowels = "aoieu";
+            for(let i=0; i<word.length; i++){
+
+                let letter = word[i].toLowerCase();
+                if(vowels.includes(letter)){
+                    vowelCount++;
+                }
+                
+            }
+            outV.innerHTML += word + "<br> " + word.length + "<br>" + "Vowels: " + "<br>" + vowelCount;
+        }
+
+        const outN = document.getElementById("outN");
+        const sumN = document.getElementById("sumN");
+
+        let file = "numbers.txt"
+
+            fetch(file)
+                .then(x => x.text())
+                .then(y => {
+                outN.innerHTML = y.replaceAll(",",".");
+                const arr = y.split(",");
+
+                let sum = 0;
+                
+                for(let i=0; i<arr.length; i++){
+                    let num = Number(arr[i]);
+                    if(num>10){
+                        sum += num;
+                    }
+                }
+                
+                sumN.innerHTML = sum;
+
+            });
+
+               async function getData() {
+                    const response = await fetch('https://www.cc.puv.fi/~hmh/tenttiAPI/');
+                    const data = await response.json();
+
+                    const text = data.text;
+
+                    let mystery = "";
+
+                    for (let i = 0; i < text.length; i++) {
+                        // take only letters
+                        if (i % 4 === 0) {
+                            mystery += text[i];
+                        }
+                    }
+
+                    document.getElementById('mysterytext').textContent = mystery;
+                }
+
+                getData();
+    </script>
+    </html>
