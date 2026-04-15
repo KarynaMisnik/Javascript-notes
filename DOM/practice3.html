@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Task 1 - Repeat Odd</h1>
+<div style="display: flex">
+    <label>val1</label>
+    <input style="margin-left: .5rem" type="number" id="val1">
+</div><br>
+<div style="display: flex">
+    <label>val2</label>
+    <input style="margin-left: .5rem" type="text" id="val2">
+</div><br>
+<button id="btnR">Repeat Odd</button><br>
+<p id="outR"></p><br>
+
+<h1>Task 2 - Popup</h1>
+<button id="btnP">Has a</button><br>
+
+<h1>Task 3 - Analyze</h1>
+<div style="display: flex">
+    <label>word</label>
+    <input style="margin-left: .5rem" type="text" id="word">
+</div><br>
+<button id="btnA">Analyze</button><br>
+<p id="outA"></p>
+<p id="consonantsNum"></p><br>
+
+<h1>Task 4 - Average</h1>
+<p id="outN"></p>
+<p id="outNA"></p><br>
+
+
+<h1>Task 5 - Mystery</h1>
+<p id="outM"></p>
+
+
+        <script>
+            const btnR = document.getElementById("btnR");
+            const outR = document.getElementById("outR");
+
+                btnR.addEventListener('click', repeat);
+
+                function repeat(){
+                    const val1 = Number(document.getElementById("val1").value);
+                    const val2 = document.getElementById("val2").value;
+                    outR.innerHTML = "";
+                    for(let i = 0; i<val1; i++){
+                        if(i%2===1){
+                            outR.innerHTML += val2 + "*<br>";
+                        }else{
+                             outR.innerHTML += val2 + "<br>";
+                        }
+                    }
+                }
+
+                const btnP = document.getElementById("btnP");
+
+                btnP.addEventListener('click', popup);
+
+                function popup(){
+                     const pop = document.getElementById('val2').value;
+                    if(pop.includes("a")){
+                        alert(pop + " " + "Contains a");
+                    }else{
+                        alert(pop + " " + "No a");
+                    }
+                }
+
+                const btnA = document.getElementById("btnA");
+                const outA = document.getElementById("outA");
+                const consonantsNum = document.getElementById("consonantsNum");
+
+                btnA.addEventListener('click', analyze);
+
+                function analyze(){
+                    const word = document.getElementById('word').value;
+
+                    outA.innerHTML = word.length;
+
+                    let consonantsCount = 0;
+                    const consonants = 'bcdfghjklmnpqrstvwxyz';
+
+
+                    for(let i = 0; i<word.length; i++){
+                        let toLowLetter = word[i].toLocaleLowerCase();
+
+                        if(consonants.includes(toLowLetter)){
+                            consonantsCount++;
+                        }
+                    }
+
+                    consonantsNum.innerHTML = consonantsCount;
+
+                }
+
+                    const outN = document.getElementById("outN");
+                    const outNA = document.getElementById("outNA");
+
+                    getText("numbers.txt");
+
+                        async function getText(file) {
+                            let x = await fetch(file);
+                            let y = await x.text();
+                            
+                            const nums = y.split(",");
+
+                            let sum = 0;
+                            const filtered = [];
+
+                            for(let i = 0; i<nums.length; i++){
+                                let num = Number(nums[i]);
+                                if(num<10){
+                                   sum += num;
+                                   filtered.push(num);
+                                }
+                            }
+                             
+                             outN.innerHTML = filtered.join(",");
+    outNA.innerHTML = sum / filtered.length;
+                        }
+
+
+                          const outM = document.getElementById("outM");
+
+                            getText("https://www.cc.puv.fi/~hmh/tenttiAPI/");
+
+                            async function getText(file) {
+                                let x = await fetch(file);
+                                let y = await x.json();
+
+                                let text = y.text;
+                                let mystery = "";
+
+                                for (let i = 0; i < text.length; i++) {
+                                    if (i % 3 === 0) {
+                                        mystery += text[i];
+                                    }
+                                }
+
+                                outM.innerHTML = mystery;
+                            }
+
+
+        </script>
+    </body>
+</html>
